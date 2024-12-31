@@ -1,0 +1,580 @@
+/* General Styles */
+body {
+    font-family: "Bower", Georgia, "Times New Roman", serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    line-height: 4rem;
+    font-size: 52px;
+}
+
+p {
+    line-height: 2rem;
+    font-size: 18px;
+    font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, black, white);
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 0.75rem;
+    color: black;
+}
+
+.nav-links a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.hamburger {
+    display: none;  /* Hidden by default */
+    cursor: pointer;
+    font-size: 30px;  /* Slightly larger to make it easier to click */
+}
+
+/* Mobile View Adjustments */
+@media screen and (max-width: 768px) {
+
+    .header {
+        position: relative; /* Ensure header has relative positioning */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 100%; /* Align it below the header */
+        right: 0;
+        width: 200px; /* Control the width of the dropdown */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 10; /* Make sure it appears on top of other elements */
+    }
+
+    .nav-links.show {
+        display: flex; /* Show the menu when active */
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 11; /* Ensure it's above the menu for easier interaction */
+    }
+
+    /* Mobile-specific styles for the hamburger and nav items */
+    .nav-links li {
+        text-align: center; /* Center text in mobile view */
+        padding: 10px 0; /* Add some space between menu items */
+    }
+
+    .nav-links a {
+        padding: 1rem;
+        font-size: 18px; /* Adjust font size for readability */
+        color: black;
+        text-decoration: none;
+    }
+
+    .nav-links a:hover {
+        color: blue;
+        text-decoration: underline;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+
+  /* Client Capabilities Section */
+.client-capabilities {
+    padding: 50px 40px;  /* Increased padding on the left and right */
+    text-align: center;
+    background-color: #f0f0f0; /* Light background */
+  }
+  
+  /* Social Icons Container */
+  .client-capabilities .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between icons */
+    margin-top: 30px; /* Space above social icons */
+  }
+  .client-capabilities p{
+    font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+    line-height: 30px;
+    font-size: 20px;
+    padding: 0 19%;
+  }
+  /* Social Icons */
+  .client-capabilities .social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Round shape */
+    background-color: #333; /* Dark background for icons */
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover Effect for Icons */
+  .client-capabilities .social-icons a:hover {
+    background-color: #0077b5; /* LinkedIn Blue color on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .client-capabilities .social-icons a {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .client-capabilities  .social-icons a {
+      width: 35px;
+      height: 35px;
+      font-size: 18px;
+    }
+  }
+  
+
+  .vission {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5% 15%; /* 10% padding for top and bottom, 15% for left and right */
+    flex-direction: column; /* Default column layout for mobile-first */
+  }
+  
+  .vission-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .vission-column {
+    flex: 1;
+  }
+  
+  .vission-row {
+    margin-bottom: 20px;
+  }
+  
+  .vission-row h2 {
+    font-size: 2.75rem;
+    line-height: 3.25rem;
+    font-weight: 300;
+    margin: 0;
+  }
+  
+  .vission-row hr {
+    border: none;
+    border-top: 1px solid #000;
+    margin: 10px 0;
+  }
+  
+  .vission-row p, .vission-row li {
+    font-size: 1.28rem;
+    line-height: 2rem;
+    margin: 10px 0;
+    color: #333333;
+  }
+  
+  .vission-row li {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .vission-column img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .vission-container {
+      flex-direction: column; /* Stack columns vertically on smaller screens */
+    }
+  
+    .vission-row h2 {
+      font-size: 2rem; /* Adjust font size for smaller screens */
+      line-height: 2.5rem;
+    }
+  
+    .vission-row p, .vission-row li {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+      line-height: 1.75rem;
+    }
+  
+    .vission {
+      padding: 10% 5%; /* Reduce side padding for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .vission-row h2 {
+      font-size: 1.75rem; /* Further adjust font size for very small screens */
+      line-height: 2.25rem;
+    }
+  
+    .vission-row p, .vission-row li {
+      font-size: 1.25rem; /* Further adjust font size for very small screens */
+      line-height: 1.5rem;
+    }
+  
+    .vission {
+      padding: 10% 3%; /* Even smaller side padding for very small screens */
+    }
+  }
+/* Section Styling */
+section.count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% 15%;
+}
+
+/* Column Styling */
+section.count .column {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+}
+
+/* Vertical Line Between Columns */
+section.count .column:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #ddd;
+}
+
+/* Number Styling */
+section.count .number {
+    font-size: 5rem; /* Bigger size */
+    font-weight: bold;
+    color: rgb(34, 81, 255); /* Use any color you like */
+    margin-bottom: 10px; /* Add bottom margin for consistent gap */
+}
+
+/* Text Styling */
+section.count .text {
+    font-size: 2rem; /* Bigger size */
+    color: #555;
+    margin-top: 10px; /* Ensure consistent gap with number */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section.count {
+        flex-wrap: nowrap; /* Prevent wrapping */
+        padding: 0; /* Remove padding from left and right */
+    }
+
+    section.count .column {
+        flex: 1; /* Equal width for all columns */
+        text-align: center;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    section.count .number {
+        font-size: 2rem; /* Smaller font size */
+        margin-bottom: 8px; /* Adjusted bottom margin */
+    }
+
+    section.count .text {
+        font-size: 1rem; /* Smaller font size */
+        margin-top: 8px; /* Consistent gap with number */
+    }
+
+    section.count .column:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background-color: #ddd; /* Vertical line */
+    }
+
+    /* Hide vertical lines in mobile view */
+    section.count .column:not(:last-child)::after {
+        display: none; /* Hide vertical line on mobile */
+    }
+}
+
+
+.meet-our-team {
+    background-color: #f8f9fa;
+    padding: 40px 0; /* Removed left and right padding */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; /* Added small padding for better alignment */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 30px;
+    flex: 0 0 19%; /* Ensures exactly 5 columns in a row on large screens */
+}
+
+.image-container {
+    width: 150px; /* Increased image size */
+    height: 150px; /* Increased image size */
+    margin: 0 auto 10px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.rounded-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fits inside the container */
+}
+
+.team-info h4 {
+    font-size: 2rem; /* Larger font size for headings */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.team-info p {
+    font-size: 1.5rem; /* Larger font size for descriptions */
+    color: #777;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .team-member {
+        flex: 0 0 48%; /* Two columns on tablets and smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .image-container {
+        width: 130px; /* Adjusted size for smaller screens */
+        height: 130px;
+    }
+
+    .team-info h4 {
+        font-size: 1.75rem; /* Adjust text size for smaller screens */
+    }
+
+    .team-info p {
+        font-size: 1.25rem; /* Adjust text size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .team-member {
+        flex: 0 0 100%; /* Stack in one column on very small screens */
+    }
+
+    .image-container {
+        width: 120px; /* Adjusted size for very small screens */
+        height: 120px;
+    }
+
+    .team-info h4 {
+        font-size: 1.5rem; /* Adjust text size for very small screens */
+    }
+
+    .team-info p {
+        font-size: 1rem; /* Adjust text size for very small screens */
+    }
+}
+
+  
+/* Help Section */
+.help-section {
+    background: linear-gradient(135deg, #051C2C 60%, #03339c 100%);
+    text-align: center;
+    padding: 4rem 2rem;
+    color: white;
+}
+
+.help-section h2 {
+    font-size: 2.75rem;
+    font-family: "Bower", Georgia, "Times New Roman", serif;
+    font-weight: 300;
+    line-height: 3.25rem;
+    text-align: center;
+}
+
+.help-section p {
+    font-size: 1.25rem;
+    font-family: "Bower", Georgia, "Times New Roman", serif;
+    font-weight: 300;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.help-section a {
+    color: white;
+    text-decoration: underline;
+}
+
+.help-section a:hover {
+    color: lightblue;
+}
+
+
+/* Footer Section */
+.footer {
+    background-color: white;
+    padding: 2rem 20rem; /* Added 20rem padding for left and right */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-logo {
+    font-size: 24px;
+    flex: 1;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem; /* Reduced the gap between links */
+    flex: 2;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+.footer-links a:hover {
+    color: blue;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.social-icons .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s;
+}
+
+.social-icons .icon:hover {
+    background-color: blue;
+    color: white;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    text-align: right;
+    font-size: 14px;
+    color: gray;
+    font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+.footer-bottom hr {
+    border: none;
+    border-top: 1px solid black;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem; /* Maintain the same style for mobile */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem; /* Same gap for mobile view */
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}

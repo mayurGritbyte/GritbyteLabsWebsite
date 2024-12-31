@@ -1,0 +1,226 @@
+/* General Styles */
+body {
+    font-family: "Bower", Georgia, "Times New Roman", serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    line-height: 4rem;
+    font-size: 52px;
+}
+
+p {
+    line-height: 2rem;
+    font-size: 18px;
+    font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, black, white);
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 0.75rem;
+    color: black;
+}
+
+.nav-links a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.hamburger {
+    display: none;  /* Hidden by default */
+    cursor: pointer;
+    font-size: 30px;  /* Slightly larger to make it easier to click */
+}
+
+/* Mobile View Adjustments */
+@media screen and (max-width: 768px) {
+
+    .header {
+        position: relative; /* Ensure header has relative positioning */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 100%; /* Align it below the header */
+        right: 0;
+        width: 200px; /* Control the width of the dropdown */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 10; /* Make sure it appears on top of other elements */
+    }
+
+    .nav-links.show {
+        display: flex; /* Show the menu when active */
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 11; /* Ensure it's above the menu for easier interaction */
+    }
+
+    /* Mobile-specific styles for the hamburger and nav items */
+    .nav-links li {
+        text-align: center; /* Center text in mobile view */
+        padding: 10px 0; /* Add some space between menu items */
+    }
+
+    .nav-links a {
+        padding: 1rem;
+        font-size: 18px; /* Adjust font size for readability */
+        color: black;
+        text-decoration: none;
+    }
+
+    .nav-links a:hover {
+        color: blue;
+        text-decoration: underline;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+
+/* Footer Section */
+.footer {
+    background-color: white;
+    padding: 2rem 20rem; /* Added 20rem padding for left and right */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-logo {
+    font-size: 24px;
+    flex: 1;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem; /* Reduced the gap between links */
+    flex: 2;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+.footer-links a:hover {
+    color: blue;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.social-icons .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s;
+}
+
+.social-icons .icon:hover {
+    background-color: blue;
+    color: white;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    text-align: right;
+    font-size: 14px;
+    color: gray;
+    font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+.footer-bottom hr {
+    border: none;
+    border-top: 1px solid black;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem; /* Maintain the same style for mobile */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem; /* Same gap for mobile view */
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}

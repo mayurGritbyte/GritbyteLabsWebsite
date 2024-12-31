@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page</title>
+    <link rel="stylesheet" href="/CSS/Testimonial.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">Your Logo</div>
+        <nav>
+            <div class="hamburger" id="hamburger">☰</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/HTML/Index.html">Home</a></li>
+                <li><a href="/HTML/Products.html">Products</a></li>
+                <li><a href="/HTML/solutions.html">Services</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="/HTML/Testimonial.html">Testimonials</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="/html/Contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to the<br>McKinsey Client Capabilities Network</h1>
+            <p>Delivering sustainable and inclusive growth through our proprietary knowledge and capabilities, deep
+                expertise, and distinctive insights</p>
+        </div>
+    </section>
+
+    <section class="client-capabilities">
+        <div class="container">
+            <p>
+                Our ~8,000 client capabilities professionals across the globe work alongside our consultants to deliver
+                sustainable and inclusive growth. They support our consultant teams, both remotely and at client sites,
+                in an agile and targeted way. Further, they are core to our firm’s R&D, developing new knowledge and
+                building and refining proprietary capabilities (e.g., assets, data sets), as well as curating, managing,
+                and maintaining them. Our portfolio includes state-of-the-art research, asset-backed and rapid
+                diagnostics, benchmarking, and workflow support. Our professionals have deep expertise and are able to
+                apply a broad range of methodologies for specialized on-demand analyses.
+            </p>
+        </div>
+    </section>
+
+    <section class="graph">
+        <div class="column">
+            <h2>~8,000</h2>
+            <p>professionals</p>
+            <p>in our Client Capabilities Network, 25% of our client-deployed colleagues</p>
+        </div>
+        <div class="column">
+            <h2>>95%</h2>
+            <p>of client work</p>
+            <p>involves client capabilities professionals</p>
+        </div>
+        <div class="column">
+            <h2>80+</h2>
+            <p>languages </p>
+            <p>spoken across our global locations</p>
+        </div>
+    </section>
+    <section class="value-beyond">
+        <div class="value-beyond-container">
+            <div class="value-beyond-text-column">
+                <h2>Creating value beyond <br>the hype</h2>
+                <p>Let’s deliver on the promise of technology from strategy to scale.</p>
+                <a href="your-link.html" class="value-beyond-cta-btn">Get started →</a>
+            </div>
+            <div class="value-beyond-image-column">
+                <img src="/hero.jpg" alt="Value Beyond Image">
+            </div>
+        </div>
+    </section>
+    <section class="images">
+        <h2>Our People</h2>
+        <div class="columns">
+            <div class="column">
+                <img src="/hero.jpg" alt="Dr. Nora Fietze">
+                <p><strong>Dr. Nora Fietze</strong></p>
+                <p>Partner, and Global Leader, Network-based Capabilities, Hamburg</p>
+                <hr>
+                <p>Leads Network-based Capabilities and oversees our Client Capabilities and Global Services locations,
+                    home to about 20 percent of our colleagues that support our firm and client service remotely.</p>
+            </div>
+            <div class="column">
+                <img src="/happy.jpg" alt="Dr. Nora Fietze">
+                <p><strong>Dr. Nora Fietze</strong></p>
+                <p>Partner, and Global Leader, Network-based Capabilities, Hamburg</p>
+                <hr>
+                <p>Leads Network-based Capabilities and oversees our Client Capabilities and Global Services locations,
+                    home to about 20 percent of our colleagues that support our firm and client service remotely.</p>
+            </div>
+        </div>
+        <div class="button">
+            <a href="#">See More</a>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Your Logo</div>
+            <div class="footer-links">
+                <a href="#">Contact Us</a>
+                <a href="#">FAQ</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Preferences</a>
+                <a href="#">Terms of Use</a>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <div class="footer-bottom">
+            <hr>
+            <p>© 1996-2024 Your Company</p>
+        </div>
+    </footer>
+
+    <!-- hamburger -->
+    <script>
+        // Get the hamburger and nav links elements
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        // Toggle the 'active' class on the nav menu when hamburger is clicked
+        hamburger.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent the click event from bubbling up to the document
+            navLinks.classList.toggle('show');
+        });
+
+        // Close the hamburger menu if clicked outside of it
+        document.addEventListener('click', (event) => {
+            // Check if the click was outside the hamburger or the nav menu
+            if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+                navLinks.classList.remove('show');
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

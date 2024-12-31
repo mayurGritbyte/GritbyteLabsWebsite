@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page</title>
+    <link rel="stylesheet" href="/CSS/solutions.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+</head>
+<body>
+
+       <!-- Header Section -->
+       <header class="header">
+        <div class="logo">Your Logo</div>
+        <nav>
+            <div class="hamburger" id="hamburger">☰</div>
+            <ul class="nav-links" id="navLinks">
+              <li><a href="/HTML/Index.html">Home</a></li>
+              <li><a href="/HTML/Products.html">Products</a></li>
+              <li><a href="/HTML/solutions.html">Services</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="/HTML/Testimonial.html">Testimonials</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="/html/Contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+    </header>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-text">
+      <h1>Our Solutions</h1>
+      <p>Reduce the Cost</p>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="content">
+    <p>
+      Asset-based consulting helps us deliver insight and impact quicker than ever. 
+      Our solutions leverage advanced technology, proprietary data, and deep expertise 
+      to help clients in new and exciting ways:
+    </p>
+    <div class="grid">
+      <div class="card">
+        <h3>End-to-End Development</h3>
+        <p>Identify improvement opportunities by benchmarking against peers and best practice.</p>
+      </div>
+      <div class="card">
+        <h3>Staff Augmentation</h3>
+        <p>Provides insight into supply/demand trends and profit pools.</p>
+      </div>
+      <div class="card">
+        <h3>Offshore Team Management</h3>
+        <p>Transforms the way critical business processes are measured and managed.</p>
+      </div>
+      <div class="card">
+        <h3>QA <br>Testing</h3>
+        <p>Improve business outcomes by leveraging big data for better decisions.</p>
+      </div>
+      <div class="card">
+        <h3>3D Design & Rendering</h3>
+        <p>Improve business outcomes by leveraging big data for better decisions.</p>
+      </div>
+      <div class="card">
+        <h3>Technical Support</h3>
+        <p>Providing 24/7 technical support for web, mobile, and XR applications. </p>
+      </div>
+    </div>
+  </section>
+  <section class="value-beyond">
+    <div class="value-beyond-container">
+        <div class="value-beyond-text-column">
+            <h2>Creating value beyond <br>the hype</h2>
+            <p>Let’s deliver on the promise of technology from strategy to scale.</p>
+            <a href="your-link.html" class="value-beyond-cta-btn">Get started →</a>
+        </div>
+        <div class="value-beyond-image-column">
+            <img src="/hero.jpg" alt="Value Beyond Image">
+        </div>
+    </div>
+</section>
+<section class="hiring-section">
+    <hr class="section-divider" />
+    <p>CAREERS</p>
+    <div class="columns">
+      <div class="column-left">
+        <img src="/career.jpg" alt="Hiring Image" class="hiring-image" />
+      </div>
+      <div class="column-right">
+        <h2 class="hiring-title">We’re hiring</h2>
+        <p class="hiring-description">
+          McKinsey is looking for inspiring data scientists, software-cloud engineers, agile coaches, data engineers, product managers, designers, and digital marketers.
+        </p>
+        <p class="hiring-call-to-action">
+          Seeking to blend analytics, design, and engineering thinking with our powerful global network like McKinsey’s? Explore a tech career with us.
+        </p>
+        <a href="next-page.html" class="learn-more">Learn more →</a>
+      </div>
+    </div>
+  </section>
+  <section class="support">
+    <h1>Need technical support for one of our solutions?</h1>
+    <button onclick="location.href='nextpage.html';">
+      <span class="icon">📧</span>
+      Technical Support
+    </button>
+  </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Your Logo</div>
+            <div class="footer-links">
+                <a href="#">Contact Us</a>
+                <a href="#">FAQ</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Preferences</a>
+                <a href="#">Terms of Use</a>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+        <div class="footer-bottom">
+            <hr>
+            <p>© 1996-2024 Your Company</p>
+        </div>
+    </footer>
+
+    <!-- hamburger -->
+    <script>
+                // Get the hamburger and nav links elements
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        // Toggle the 'active' class on the nav menu when hamburger is clicked
+        hamburger.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent the click event from bubbling up to the document
+            navLinks.classList.toggle('show');
+        });
+
+        // Close the hamburger menu if clicked outside of it
+        document.addEventListener('click', (event) => {
+            // Check if the click was outside the hamburger or the nav menu
+            if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+                navLinks.classList.remove('show');
+            }
+        });
+
+    </script>
+    
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+<script>
+    // Initialize the map
+    const map = L.map('map').setView([20.5937, 78.9629], 3); // Center map on India for a global view
+
+    // Add OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Locations with latitude, longitude, and label
+    const locations = [
+        { name: "Bangalore, India", lat: 12.9716, lon: 77.5946 },
+        { name: "Business Bay, Dubai", lat: 25.2048, lon: 55.2708 },
+        { name: "Toronto, Canada", lat: 43.7, lon: -79.42 },
+        { name: "London, UK", lat: 51.5074, lon: -0.1278 },
+        { name: "Seoul, South Korea", lat: 37.5665, lon: 126.978 },
+    ];
+
+    // Add markers for each location
+    locations.forEach(location => {
+        L.marker([location.lat, location.lon])
+            .addTo(map)
+            .bindPopup(`<b>${location.name}</b>`)
+            .openPopup();
+    });
+</script>
+  
+</body>
+</html>

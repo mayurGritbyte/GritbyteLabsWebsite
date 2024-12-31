@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Gridhello Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .gridhello {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* Two columns */
+            width: 100%;
+            height: 80vh;
+            /* Reduced section height */
+        }
+
+        .gridhello .col1 {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            /* Align text at the bottom of the image */
+            background-color: #f4f4f4;
+        }
+            .column.text-bottom p {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.75rem;
+    }
+
+        .row .col p {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.75rem;
+        }
+
+        .gridhello .col1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensure image covers the column completely */
+        }
+
+        .gridhello .col1::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            /* Adjust the height of the gradient */
+            background: linear-gradient(to top, white, transparent);
+        }
+
+        .gridhello .col1 .text {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            color: black;
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            font-weight: 300;
+            z-index: 1;
+        }
+
+        .gridhello .col2 {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            /* Two rows */
+        }
+
+        .gridhello .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* Two columns in each row */
+        }
+
+        .gridhello .row .col {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* padding: 10px; */
+        }
+
+        /* Background colors */
+        .gridhello .row .col:nth-child(1) {
+            background-color: white;
+            /* White background for Column 1 in Row 1 */
+        }
+
+        .gridhello .row .col:nth-child(2) {
+            background-color: white;
+            /* White background for Column 2 in Row 1 */
+            display: flex;
+            /* Enable flexbox */
+            flex-direction: column;
+            /* Stack content vertically */
+            justify-content: flex-end;
+            /* Align text at the bottom */
+        }
+
+        .gridhello .row .col:nth-child(2) p {
+            margin: 0;
+            padding: 20px;
+        }
+
+        .gridhello .row:nth-child(2) .col:nth-child(1) {
+            background-color: navy;
+            /* Navy blue background for Column 1 in Row 2 */
+            color: white;
+            /* White text color */
+        }
+
+        .gridhello .row:nth-child(2) .col:nth-child(2) {
+            background-color: navy;
+            /* Navy blue background for Column 2 in Row 2 */
+            color: white;
+            /* White text color */
+        }
+
+        /* Responsive for smaller screens */
+        @media (max-width: 768px) {
+            .gridhello {
+                grid-template-columns: 1fr;
+                /* Single column layout */
+                height: auto;
+                /* Allow height to adjust based on content */
+            }
+
+            .gridhello .col2 {
+                grid-template-rows: auto;
+            }
+
+            .gridhello .row {
+                grid-template-columns: 1fr;
+                /* Single column in each row on smaller screens */
+            }
+        }
+
+        .grid4 {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+        }
+
+        .grid4 .row {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+        }
+
+        .grid4 .column {
+            flex: 1;
+            min-width: 220px;
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            /* Ensures content inside column is vertically aligned */
+            height: 100%;
+        }
+
+        .grid4 .text-bottom {
+            margin-top: auto;
+            /* This ensures the text is pushed to the bottom of the column */
+            padding-top: 20px;
+            /* Optional: Top padding */
+            padding-bottom: 20px;
+            /* Optional: Bottom padding */
+            padding-left: 10px;
+            /* Optional: Left padding */
+            padding-right: 10px;
+            /* Optional: Right padding */
+            text-align: left;
+            /* Optional: Center-align the text */
+        }
+
+        .grid4 .image-fit img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .grid4 .column {
+                flex: 1 0 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="gridhello">
+        <div class="col1">
+            <img src="/happy.jpg" alt="Sample Image">
+            <div class="text">Building careers and changing lives: A decade of impact with Generation</div>
+        </div>
+        <div class="col2">
+            <div class="row">
+                <div class="col">
+                    <img src="/hero.jpg" alt="Image 1" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="col">
+                    <p>New McKinsey research reveals the “wizardry” behind 18 hyper-growth industries</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>New McKinsey research reveals the “wizardry” behind 18 hyper-growth industries</p>
+                </div>
+                <div class="col">
+                    <!-- <p>Text in Column 2 in Row 2</p> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="grid4">
+        <div class="row">
+            <div class="column text-bottom">
+                <p>New McKinsey research reveals the “wizardry” behind 18 hyper-growth industries</p>
+            </div>
+            <div class="column image-fit">
+                <img src="/hero.jpg" alt="Image 1">
+            </div>
+            <div class="column text-bottom">
+                <p>New McKinsey research reveals the “wizardry” behind 18 hyper-growth industries</p>
+            </div>
+            <div class="column image-fit">
+                <img src="/hero.jpg" alt="Image 2">
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

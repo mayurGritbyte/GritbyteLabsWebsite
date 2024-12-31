@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page</title>
+    <link rel="stylesheet" href="/CSS/Contact.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+</head>
+<body>
+
+       <!-- Header Section -->
+       <header class="header">
+        <div class="logo">Your Logo</div>
+        <nav>
+            <div class="hamburger" id="hamburger">☰</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/HTML/Index.html">Home</a></li>
+                <li><a href="/HTML/Products.html">Products</a></li>
+                <li><a href="/HTML/solutions.html">Services</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="/HTML/Testimonial.html">Testimonials</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="/html/Contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+<section class="contact-us">
+    <h2>Contact Us</h2>
+    <div class="contact-content">
+        <div class="form-column">
+            <p>Thank you for your interest in McKinsey. Please fill out the form below to ask a question or report a technical problem.</p>
+            <p>Please note: while we appreciate your questions, we are unable to respond to all inquiries.</p>
+            <p>Required fields are marked with an asterisk (*).</p>
+            <form>
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company">
+
+                <label for="services">Services Required</label>
+                <select id="services" name="services">
+                    <option value="xr-development">XR Development</option>
+                    <option value="ai-solutions">AI Solutions</option>
+                    <option value="qa-testing">QA Testing</option>
+                </select>
+
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="cta-button">Submit Your Query</button>
+            </form>
+        </div>
+        <div class="info-column">
+            <hr>
+            <p><strong>Media inquiries</strong></p>
+            <p>Visit our media center to find <a href="media-center.html" target="_blank">contact details</a><br> for our media relations team in your region.</p>
+            <hr>
+            <p><strong>Media inquiries</strong></p>
+            <p>Visit our media center to find <a href="media-center.html" target="_blank">contact details</a> <br> for our media relations team in your region.</p>
+            <hr>
+            <p><strong>Media inquiries</strong></p>
+            <p>Visit our media center to find <a href="media-center.html" target="_blank">contact details</a> <br> for our media relations team in your region.</p>
+            <hr>
+        </div>
+    </div>
+        <!-- Interactive Map Section -->
+        <h2>Our Global Offices</h2>
+        <div id="map" style="height: 500px;"></div>
+    
+</section>
+
+  
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Your Logo</div>
+            <div class="footer-links">
+                <a href="#">Contact Us</a>
+                <a href="#">FAQ</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Preferences</a>
+                <a href="#">Terms of Use</a>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+        <div class="footer-bottom">
+            <hr>
+            <p>© 1996-2024 Your Company</p>
+        </div>
+    </footer>
+
+    <!-- hamburger -->
+    <script>
+                // Get the hamburger and nav links elements
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        // Toggle the 'active' class on the nav menu when hamburger is clicked
+        hamburger.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent the click event from bubbling up to the document
+            navLinks.classList.toggle('show');
+        });
+
+        // Close the hamburger menu if clicked outside of it
+        document.addEventListener('click', (event) => {
+            // Check if the click was outside the hamburger or the nav menu
+            if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+                navLinks.classList.remove('show');
+            }
+        });
+
+    </script>
+    
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+<script>
+    // Initialize the map
+    const map = L.map('map').setView([20.5937, 78.9629], 3); // Center map on India for a global view
+
+    // Add OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Locations with latitude, longitude, and label
+    const locations = [
+        { name: "Bangalore, India", lat: 12.9716, lon: 77.5946 },
+        { name: "Business Bay, Dubai", lat: 25.2048, lon: 55.2708 },
+        { name: "Toronto, Canada", lat: 43.7, lon: -79.42 },
+        { name: "London, UK", lat: 51.5074, lon: -0.1278 },
+        { name: "Seoul, South Korea", lat: 37.5665, lon: 126.978 },
+    ];
+
+    // Add markers for each location
+    locations.forEach(location => {
+        L.marker([location.lat, location.lon])
+            .addTo(map)
+            .bindPopup(`<b>${location.name}</b>`)
+            .openPopup();
+    });
+</script>
+  
+</body>
+</html>

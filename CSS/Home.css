@@ -1,0 +1,1097 @@
+/* General Styles */
+body {
+    font-family: "Bower", Georgia, "Times New Roman", serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    line-height: 4rem;
+    font-size: 52px;
+}
+
+p {
+    line-height: 2rem;
+    font-size: 18px;
+    font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 0.75rem;
+    color: black;
+}
+
+.nav-links a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.hamburger {
+    display: none;
+    /* Hidden by default */
+    cursor: pointer;
+    font-size: 30px;
+    /* Slightly larger to make it easier to click */
+}
+
+/* Mobile View Adjustments */
+@media screen and (max-width: 768px) {
+
+    .header {
+        position: relative;
+        /* Ensure header has relative positioning */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 100%;
+        /* Align it below the header */
+        right: 0;
+        width: 200px;
+        /* Control the width of the dropdown */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        /* Make sure it appears on top of other elements */
+    }
+
+    .nav-links.show {
+        display: flex;
+        /* Show the menu when active */
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 11;
+        /* Ensure it's above the menu for easier interaction */
+    }
+
+    /* Mobile-specific styles for the hamburger and nav items */
+    .nav-links li {
+        text-align: center;
+        /* Center text in mobile view */
+        padding: 10px 0;
+        /* Add some space between menu items */
+    }
+
+    .nav-links a {
+        padding: 1rem;
+        font-size: 18px;
+        /* Adjust font size for readability */
+        color: black;
+        text-decoration: none;
+    }
+
+    .nav-links a:hover {
+        color: blue;
+        text-decoration: underline;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    background-image: url('your-image-url.jpg');
+    /* Add your background image URL here */
+    background-size: cover;
+    /* Ensure the image covers the entire section */
+    background-position: center;
+    /* Center the background image */
+    min-height: 60vh;
+    /* Set the minimum height of the hero section to 63% of the viewport height */
+}
+
+.hero p {
+    line-height: 2rem;
+    font-size: 1.6rem;
+    font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+/* Button Styling */
+.cta-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    /* Center the buttons */
+    gap: 1rem;
+    /* This adds space between the buttons */
+    flex-wrap: wrap;
+    /* Allow buttons to wrap if needed on smaller screens */
+}
+
+.cta {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0 1rem;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.cta:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile View Adjustments */
+@media screen and (max-width: 768px) {
+    .cta-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        /* Space between the buttons */
+        flex-direction: column;
+        /* Stack the buttons vertically on mobile */
+    }
+
+    .cta {
+        width: 100%;
+        /* Make buttons take full width on mobile */
+        padding: 1rem;
+        /* Adjust padding for mobile */
+        margin: 0.5rem 0;
+        /* Add margin between buttons on mobile */
+    }
+}
+
+/* .insight applied to all relevant elements */
+/* General Styles */
+.insight {
+    display: flex;
+    /* Arrange items in a row */
+    flex-wrap: nowrap;
+    /* Prevent columns from wrapping */
+    justify-content: space-between;
+    /* Space out the columns */
+    padding: 20px 10px;
+    /* Reduce left and right padding, keep top and bottom padding */
+    max-width: 1500px;
+    /* Increase max width for the section */
+    margin: 0 auto;
+    /* Center the section */
+    gap: 20px;
+    /* Add spacing between columns */
+    overflow-x: auto;
+    /* Allow horizontal scrolling if content overflows */
+}
+
+.insight .column {
+    display: flex;
+    align-items: center;
+    flex: 1 1 calc(25% - 20px);
+    /* Make each column responsive */
+    min-width: 200px;
+    /* Minimum width for each column */
+}
+
+.insight p {
+    line-height: 1.4rem;
+    font-size: 1.5rem;
+    font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+    font-weight: 500;
+}
+.insight .number {
+    margin-right: 10px;
+    /* Gap after the number */
+    font-weight: bold;
+    font-size: 20px;
+    color:#2251FF;
+}
+
+.insight .vertical-line {
+    width: 1px;
+    height: 50px;
+    background-color: #2251FF;
+    /* Adjust line color */
+    margin: 0 10px;
+}
+
+.insight .text {
+    margin-left: 10px;
+    /* Adds space between the line and text */
+    flex: 1;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    /* Ensures the text takes available space */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .insight {
+        padding: 20px;
+        /* Padding on all sides for small screens */
+        overflow-x: auto;
+        /* Allow horizontal scrolling */
+    }
+
+    .insight .column {
+        flex: 1 1 calc(25% - 20px);
+        /* Keep columns in one row but responsive */
+    }
+
+    .insight .vertical-line {
+        display: block;
+        /* Hide the vertical line for better readability */
+    }
+}
+
+/* General Styles */
+.year-in-charts {
+    padding: 0;
+    /* Remove padding from the container */
+}
+
+.year-in-charts .right-column h1,
+.year-in-charts .right-column p,
+.year-in-charts .right-column .arrow-link {
+    padding-left: 20px;
+    /* Adjust the padding value as needed */
+}
+
+.year-in-charts .container {
+    display: flex;
+    /* Flex layout for two columns */
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+    justify-content: space-between;
+    /* Space out the columns */
+    align-items: center;
+    /* Align items vertically in the center */
+}
+
+.year-in-charts .left-column {
+    flex: 1;
+    /* Both columns take equal width */
+    min-width: 300px;
+    /* Ensure columns don't shrink too small */
+    padding: 0;
+    /* Remove any padding from the columns */
+    order: 1;
+    /* Text comes first on desktop */
+}
+
+.year-in-charts .right-column {
+    display: flex;
+    flex-direction: column;
+    /* Align text vertically */
+    order: 2;
+    /* Image comes second on desktop */
+}
+
+.year-in-charts .left-column,
+.right-column {
+    flex: 1;
+    /* Both columns take equal width */
+    min-width: 300px;
+    /* Ensure columns don't shrink too small */
+    padding: 0;
+    /* Remove any padding from the columns */
+}
+
+.year-in-charts .left-column img {
+    width: 100%;
+    /* Make the image responsive */
+    height: 45vh;
+    /* Make the image fill the container */
+    object-fit: cover;
+    /* Ensure the image covers the area without distortion */
+    padding: 0;
+    /* Remove any padding from the image */
+    margin: 0;
+    /* Ensure no margin is applied */
+    display: block;
+    /* Ensure the image is a block element (removes inline gap) */
+}
+
+.year-in-charts .right-column {
+    display: flex;
+    flex-direction: column;
+    /* Align text vertically */
+}
+
+.year-in-charts .right-column h1 {
+    font-size: 52px;
+    /* Font size for the title */
+    margin-bottom: 10px;
+}
+
+.year-in-charts .right-column p {
+    font-size: 20px;
+    /* Font size for the description */
+    margin-bottom: 20px;
+}
+
+.year-in-charts .arrow-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+    /* Smooth transition for color change */
+}
+
+.year-in-charts .arrow-link:hover {
+    color: #007bff;
+    /* Change color on hover */
+}
+
+.year-in-charts .arrow-link .arrow {
+    transition: transform 0.3s ease;
+    /* Smooth transition for arrow movement */
+}
+
+.year-in-charts .arrow-link:hover .arrow {
+    transform: translateX(5px);
+    /* Move the arrow slightly to the right on hover */
+}
+
+.year-in-charts .arrow {
+    margin-right: 10px;
+    /* Space between arrow and text */
+    font-size: 24px;
+    /* Size of the arrow */
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .year-in-charts .container {
+        flex-direction: column;
+        /* Stack columns vertically on small screens */
+        align-items: flex-start;
+        /* Align items to the start */
+    }
+
+    /* Ensure full width for columns on mobile */
+    .year-in-charts .left-column,
+    .year-in-charts .right-column {
+        flex: 1 1 100%;
+        /* Make both columns take full width on small screens */
+        padding-left: 15px;
+        /* Add padding to the left */
+        padding-right: 15px;
+        /* Add padding to the right */
+        box-sizing: border-box;
+        /* Ensure padding is included in the element's total width */
+    }
+
+    /* Order the text first and image second on mobile */
+    .year-in-charts .left-column {
+        order: 1;
+        /* Text comes first on mobile */
+    }
+
+    .year-in-charts .right-column {
+        order: -1;
+        /* Image comes second on mobile */
+    }
+
+    .year-in-charts .right-column h1 {
+        font-size: 32px;
+        /* Smaller font size on mobile */
+    }
+
+    .year-in-charts .right-column p {
+        font-size: 16px;
+        /* Smaller font size on mobile */
+    }
+
+    .year-in-charts .arrow-link {
+        font-size: 14px;
+        /* Adjust link size for mobile */
+    }
+
+    .year-in-charts .left-column img {
+        height: 25vh;
+        /* Smaller image height for mobile screens */
+    }
+}
+
+
+/* General Styles for Products Section */
+.other-year-in-charts {
+    padding: 0;
+    margin: 0;
+}
+
+.other-year-in-charts .container {
+    display: flex;
+    /* Flex layout for two columns */
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+    justify-content: space-between;
+    /* Space between columns */
+    align-items: center;
+    /* Align items vertically */
+    margin: 0;
+}
+
+.other-year-in-charts .left-column,
+.other-year-in-charts .right-column {
+    flex: 1;
+    /* Both columns take equal width */
+    min-width: 300px;
+    /* Prevent columns from shrinking too much */
+    padding: 0;
+    margin: 0;
+}
+
+/* Right column (image) styles */
+.other-year-in-charts .right-column img {
+    width: 100%;
+    /* Make the image responsive */
+    height: 45vh;
+    /* Set the height for larger screens */
+    object-fit: cover;
+    /* Maintain aspect ratio without distortion */
+    display: block;
+    /* Remove any inline gaps */
+}
+
+/* Left column styles */
+.other-year-in-charts .left-column {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.other-year-in-charts .left-column h1 {
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+
+.other-year-in-charts .left-column p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.other-year-in-charts .arrow-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.other-year-in-charts .arrow-link:hover {
+    color: #007bff;
+}
+
+.other-year-in-charts .arrow-link .arrow {
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.other-year-in-charts .arrow-link:hover .arrow {
+    transform: translateX(3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .other-year-in-charts .container {
+        flex-direction: column;
+        /* Stack the columns vertically */
+        align-items: flex-start;
+        /* Align items to the start */
+    }
+
+    .other-year-in-charts .left-column,
+    .other-year-in-charts .right-column {
+        flex: 1 1 100%;
+        /* Columns take full width */
+        padding: 15px;
+        /* Add padding for better spacing */
+    }
+
+    .other-year-in-charts .right-column img {
+        height: 25vh;
+        /* Reduce image height on mobile screens */
+    }
+
+    .other-year-in-charts .left-column h1 {
+        font-size: 32px;
+        /* Smaller font size on mobile */
+    }
+
+    .other-year-in-charts .left-column p {
+        font-size: 16px;
+        /* Adjust description font size */
+    }
+
+    .other-year-in-charts .arrow-link {
+        font-size: 14px;
+        /* Adjust link size */
+    }
+}
+.gridhello {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two columns */
+    width: 100%;
+    height: 80vh;
+    /* Reduced section height */
+}
+
+.gridhello .col1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Align text at the bottom of the image */
+    background-color: #f4f4f4;
+}
+    .column.text-bottom p {
+font-size: 1.5rem;
+font-weight: 500;
+line-height: 1.75rem;
+}
+
+.row .col p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+}
+
+.gridhello .col1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure image covers the column completely */
+}
+
+.gridhello .col1::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    /* Adjust the height of the gradient */
+    background: linear-gradient(to top, white, transparent);
+}
+
+.gridhello .col1 .text {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: black;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 300;
+    z-index: 1;
+}
+
+.gridhello .col2 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    /* Two rows */
+}
+
+.gridhello .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two columns in each row */
+}
+
+.gridhello .row .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+}
+
+/* Background colors */
+.gridhello .row .col:nth-child(1) {
+    background-color: white;
+    /* White background for Column 1 in Row 1 */
+}
+
+.gridhello .row .col:nth-child(2) {
+    background-color: white;
+    /* White background for Column 2 in Row 1 */
+    display: flex;
+    /* Enable flexbox */
+    flex-direction: column;
+    /* Stack content vertically */
+    justify-content: flex-end;
+    /* Align text at the bottom */
+}
+
+.gridhello .row .col:nth-child(2) p {
+    margin: 0;
+    padding: 20px;
+}
+
+.gridhello .row:nth-child(2) .col:nth-child(1) {
+    background-color: navy;
+    /* Navy blue background for Column 1 in Row 2 */
+    color: white;
+    /* White text color */
+}
+
+.gridhello .row:nth-child(2) .col:nth-child(2) {
+    background-color: navy;
+    /* Navy blue background for Column 2 in Row 2 */
+    color: white;
+    /* White text color */
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .gridhello {
+        grid-template-columns: 1fr;
+        /* Single column layout */
+        height: auto;
+        /* Allow height to adjust based on content */
+    }
+
+    .gridhello .col2 {
+        grid-template-rows: auto;
+    }
+
+    .gridhello .row {
+        grid-template-columns: 1fr;
+        /* Single column in each row on smaller screens */
+    }
+}
+
+.grid4 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.grid4 .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.grid4 .column {
+    flex: 1;
+    min-width: 220px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* Ensures content inside column is vertically aligned */
+    height: 100%;
+}
+
+.grid4 .text-bottom {
+    margin-top: auto;
+    /* This ensures the text is pushed to the bottom of the column */
+    padding-top: 20px;
+    /* Optional: Top padding */
+    padding-bottom: 20px;
+    /* Optional: Bottom padding */
+    padding-left: 10px;
+    /* Optional: Left padding */
+    padding-right: 10px;
+    /* Optional: Right padding */
+    text-align: left;
+    /* Optional: Center-align the text */
+}
+
+.grid4 .image-fit img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .grid4 .column {
+        flex: 1 0 100%;
+    }
+}
+/* Video Section */
+.video-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 120px;
+    gap: 20px;
+    /* Adds space between video and text columns */
+    box-sizing: border-box;
+    /* Ensures padding is accounted in the width */
+}
+
+.video-column {
+    flex: 1;
+    padding: 20px;
+    padding-left: 40px;
+    /* Extra left padding */
+}
+
+.text-column {
+    flex: 1;
+    padding: 20px;
+    margin-bottom: 20px;
+    /* Adds spacing below the text column */
+    box-sizing: border-box;
+    /* Ensures proper width calculation */
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+.text-column h2 {
+    font-size: 2.75rem;
+    margin-bottom: 10px;
+    font-weight: 300;
+    line-height:3.35rem;
+}
+
+.text-column p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.5rem;
+}
+
+.arrow-link {
+    display: inline-block;
+    color: #007BFF;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.arrow-link:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .video-section {
+        flex-direction: column;
+        /* Stacks elements vertically */
+        padding: 20px 10px;
+        /* Reduces overall padding */
+        gap: 20px;
+        /* Adds space between sections */
+    }
+
+    .video-column {
+        flex: none;
+        width: 100%;
+        /* Ensures column takes up full width */
+        padding: 0;
+        /* Removes extra padding to fit the screen */
+    }
+
+    .text-column {
+        flex: none;
+        width: 100%;
+        /* Ensures column takes up full width */
+        padding: 0 10px;
+        /* Adds padding within the column */
+        margin-bottom: 30px;
+        /* Space below the text column */
+    }
+
+    video {
+        width: 100%;
+        /* Makes the video take the full width */
+        /* max-width: 320px; */
+        /* Optional: limit the size */
+        height: auto;
+        /* Maintains aspect ratio */
+        margin: 0 auto;
+        /* Centers the video */
+    }
+
+    .text-column h2 {
+        font-size: 20px;
+    }
+
+    .text-column p {
+        font-size: 14px;
+    }
+}
+/* General Styles */
+.job {
+  margin: 0; /* Removes any default margin */
+  padding: 0; /* No padding, including top padding */
+  width: 100%; /* Ensures the section spans the entire screen width */
+  background-color: #f4f4f4;
+}
+
+.job .job-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 100%; /* Makes the container span full width */
+  margin: 0; /* Removes any default margin */
+}
+
+.job .column {
+  width: 48%; /* Takes up roughly half of the container */
+}
+
+.job .text-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10%; /* Adds 10% padding on all sides */
+  text-align: center; /* Centers the text */
+}
+
+.job .text-column p {
+  font-size: 3.25rem; /* Large font size */
+  line-height: 4rem; /* Spaced line height */
+  font-weight: 300; /* Light font weight */
+  margin: 0; /* Remove any default margin */
+}
+
+.job .search-jobs {
+  display: inline-flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.job .search-jobs .arrow {
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.job .search-jobs:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Image Column */
+.job .image-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures the image doesn't exceed the box */
+  height: 100%; /* Ensures the image fills the entire column height */
+  padding: 0; /* Removes any padding from the column */
+}
+
+.job .image-column img {
+  width: 100%; /* Fills the full width of its container */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures the image fills the container */
+  margin: 0; /* Removes any margin */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .job .job-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .job .column {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .job .text-column {
+    padding: 10%; /* Retain padding for mobile */
+    text-align: center; /* Centers text on smaller screens */
+  }
+
+  .job .search-jobs {
+    justify-content: center;
+  }
+}
+
+  
+/* Help Section */
+.help-section {
+    background: linear-gradient(135deg, #051C2C 60%, #03339c 100%);
+    text-align: center;
+    padding: 4rem 2rem;
+    color: white;
+}
+
+.help-section h2 {
+    font-size: 2.75rem;
+    font-family: "Bower", Georgia, "Times New Roman", serif;
+    font-weight: 300;
+    line-height: 3.25rem;
+    text-align: center;
+}
+
+.help-section p {
+    font-size: 1.25rem;
+    font-family: "Bower", Georgia, "Times New Roman", serif;
+    font-weight: 300;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.help-section a {
+    color: white;
+    text-decoration: underline;
+}
+
+.help-section a:hover {
+    color: lightblue;
+}
+
+
+/* Footer Section */
+.footer {
+    background-color: white;
+    padding: 2rem 20rem; /* Added 20rem padding for left and right */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-logo {
+    font-size: 24px;
+    flex: 1;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem; /* Reduced the gap between links */
+    flex: 2;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+.footer-links a:hover {
+    color: blue;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.social-icons .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s;
+}
+
+.social-icons .icon:hover {
+    background-color: blue;
+    color: white;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    text-align: right;
+    font-size: 14px;
+    color: gray;
+    font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+.footer-bottom hr {
+    border: none;
+    border-top: 1px solid black;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem; /* Maintain the same style for mobile */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem; /* Same gap for mobile view */
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}

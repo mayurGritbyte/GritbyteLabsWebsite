@@ -1,0 +1,631 @@
+/* General Styles */
+body {
+    font-family: "Bower", Georgia, "Times New Roman", serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    line-height: 4rem;
+    font-size: 52px;
+}
+
+p {
+    line-height: 2rem;
+    font-size: 18px;
+    font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, black, white);
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 0.75rem;
+    color: black;
+}
+
+.nav-links a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.hamburger {
+    display: none;
+    /* Hidden by default */
+    cursor: pointer;
+    font-size: 30px;
+    /* Slightly larger to make it easier to click */
+}
+
+/* Mobile View Adjustments */
+@media screen and (max-width: 768px) {
+
+    .header {
+        position: relative;
+        /* Ensure header has relative positioning */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 100%;
+        /* Align it below the header */
+        right: 0;
+        width: 200px;
+        /* Control the width of the dropdown */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        /* Make sure it appears on top of other elements */
+    }
+
+    .nav-links.show {
+        display: flex;
+        /* Show the menu when active */
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 11;
+        /* Ensure it's above the menu for easier interaction */
+    }
+
+    /* Mobile-specific styles for the hamburger and nav items */
+    .nav-links li {
+        text-align: center;
+        /* Center text in mobile view */
+        padding: 10px 0;
+        /* Add some space between menu items */
+    }
+
+    .nav-links a {
+        padding: 1rem;
+        font-size: 18px;
+        /* Adjust font size for readability */
+        color: black;
+        text-decoration: none;
+    }
+
+    .nav-links a:hover {
+        color: blue;
+        text-decoration: underline;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('/hero.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 5rem 8rem;
+    /* Significantly increased left and right padding */
+    color: rgb(7, 7, 7);
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 4.75rem;
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+/* Content Section */
+.content {
+    padding: 3rem 8rem;
+    /* Significantly increased left and right padding */
+    text-align: center;
+}
+
+.content h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.content p {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    /* border-radius: 8px; */
+    background: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1.75rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+.card p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: #666;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 3rem 2rem;
+        /* Adjusted for smaller screens */
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .content {
+        padding: 3rem 2rem;
+        /* Adjusted for smaller screens */
+    }
+
+    .content p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+#product1 {
+    padding: 20px;
+  }
+  
+  #product1 .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  #product1 .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensures equal height */
+    gap: 20px; /* Adds gap between columns */
+  }
+  
+  #product1 .col-6 {
+    flex: 1; /* Ensures both columns take equal width */
+    position: relative; /* To place the vertical line in between */
+  }
+  
+  /* Vertical line between the columns */
+  #product1 .image-column {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    border-right: 2px solid #000; /* Add a vertical line between columns */
+    padding-right: 20px; /* Optional: Add some space to the right of the image */
+  }
+  
+  #product1 .content-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute content evenly */
+  }
+  
+  #product1 .col-6 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the height of the column */
+  }
+  
+  #product1 h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  #product1 h4 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  #product1 ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #product1 ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 992px) {
+    #product1 .col-6 {
+      width: 50%; /* Keep columns in one row for tablets */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #product1 .row {
+      flex-wrap: wrap; /* Allow wrapping on smaller screens if needed */
+      gap: 10px; /* Smaller gap on mobile */
+    }
+  
+    #product1 .col-6 {
+      width: 100%; /* Stack columns on mobile screens */
+    }
+  
+    /* Reorder the columns on mobile view: Image comes first */
+    #product1 .row {
+      flex-direction: column-reverse; /* Reverses the order of the columns */
+    }
+  
+    /* Remove the vertical line on mobile */
+    #product1 .image-column {
+      border-right: none; /* Remove the border */
+      padding-right: 0; /* Remove padding */
+    }
+  
+    #product1 h2 {
+      font-size: 1.75rem;
+    }
+  
+    #product1 h4 {
+      font-size: 1.25rem;
+    }
+  
+    #product1 ul li {
+      font-size: 0.9rem;
+    }
+  }
+  
+
+
+
+  #product2 {
+    padding: 20px;
+  }
+  
+  #product2 .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  #product2 .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensures equal height */
+    gap: 20px; /* Adds gap between columns */
+  }
+  
+  #product2 .col-6 {
+    flex: 1; /* Ensures both columns take equal width */
+    position: relative; /* To place the vertical line in between */
+  }
+  
+  /* Vertical line between the columns */
+  #product2 .content-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute content evenly */
+  }
+  
+  #product2 .image-column {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    border-left: 2px solid #000; /* Add a vertical line between columns */
+    padding-left: 20px; /* Optional: Add some space to the left of the image */
+  }
+  
+  #product2 .col-6 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the height of the column */
+  }
+  
+  #product2 h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  #product2 h4 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  #product2 ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #product2 ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 992px) {
+    #product2 .col-6 {
+      width: 50%; /* Keep columns in one row for tablets */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #product2 .row {
+      flex-wrap: wrap; /* Allow wrapping on smaller screens if needed */
+      gap: 10px; /* Smaller gap on mobile */
+    }
+  
+    #product2 .col-6 {
+      width: 100%; /* Stack columns on mobile screens */
+    }
+  
+    /* Reorder the columns on mobile view: Image comes last */
+    #product2 .row {
+      flex-direction: column; /* Normal order of columns */
+    }
+  
+    /* Remove the vertical line on mobile */
+    #product2 .image-column {
+      border-left: none; /* Remove the border */
+      padding-left: 0; /* Remove padding */
+    }
+  
+    #product2 h2 {
+      font-size: 1.75rem;
+    }
+  
+    #product2 h4 {
+      font-size: 1.25rem;
+    }
+  
+    #product2 ul li {
+      font-size: 0.9rem;
+    }
+  }
+ /* support */
+.support {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem; /* Increased padding */
+  /* border: 1px solid #ddd; */
+  border-radius: 8px;
+  background-color: #F0F0F0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-height: 250px; /* Adjusted min-height for a larger section */
+}
+
+.support h1 {
+  font-size: 2.25rem;
+  line-height: 3.25rem;
+  font-weight: 300;
+  margin: 0;
+  text-align: left;
+}
+
+.support button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2251FF;
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  font-weight: 300;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.support button:hover {
+  background-color: #0056b3;
+}
+
+.support button .icon {
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.support button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .support {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+      padding: 2rem; /* Reduced padding on smaller screens */
+      min-height: 300px; /* Adjusted min-height */
+  }
+  .support h1 {
+      text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .support {
+      padding: 1.5rem; /* Reduced padding on smaller screens */
+      gap: 1.5rem; /* Smaller gap for better spacing on mobile */
+  }
+  .support h1 {
+      font-size: 1.75rem; /* Smaller font size on mobile */
+      line-height: 2.5rem; /* Adjusted line height */
+  }
+  .support button {
+      font-size: 1.1rem; /* Smaller button text size on mobile */
+      padding: 0.5rem 1rem; /* Adjusted padding for buttons */
+  }
+}
+/* Footer Section */
+.footer {
+    background-color: white;
+    padding: 2rem 20rem;
+    /* Added 20rem padding for left and right */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-logo {
+    font-size: 24px;
+    flex: 1;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+    /* Reduced the gap between links */
+    flex: 2;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+.footer-links a:hover {
+    color: blue;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.social-icons .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s;
+}
+
+.social-icons .icon:hover {
+    background-color: blue;
+    color: white;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    text-align: right;
+    font-size: 14px;
+    color: gray;
+    font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+.footer-bottom hr {
+    border: none;
+    border-top: 1px solid black;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem;
+        /* Maintain the same style for mobile */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+        /* Same gap for mobile view */
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
