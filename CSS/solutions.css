@@ -140,7 +140,7 @@ p {
 /* Hero Section */
 .hero {
     position: relative;
-    background: url('/hero.jpg') no-repeat center center;
+    background: url('../hero.jpg') no-repeat center center;
     background-size: cover;
     padding: 5rem 8rem;
     /* Significantly increased left and right padding */
