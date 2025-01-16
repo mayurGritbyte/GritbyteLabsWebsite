@@ -59,16 +59,19 @@ p {
 }
 
 .hamburger {
-    display: none;  /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     cursor: pointer;
-    font-size: 30px;  /* Slightly larger to make it easier to click */
+    font-size: 30px;
+    /* Slightly larger to make it easier to click */
 }
 
 /* Mobile View Adjustments */
 @media screen and (max-width: 768px) {
 
     .header {
-        position: relative; /* Ensure header has relative positioning */
+        position: relative;
+        /* Ensure header has relative positioning */
     }
 
     .nav-links {
@@ -76,32 +79,40 @@ p {
         flex-direction: column;
         background: white;
         position: absolute;
-        top: 100%; /* Align it below the header */
+        top: 100%;
+        /* Align it below the header */
         right: 0;
-        width: 200px; /* Control the width of the dropdown */
+        width: 200px;
+        /* Control the width of the dropdown */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        z-index: 10; /* Make sure it appears on top of other elements */
+        z-index: 10;
+        /* Make sure it appears on top of other elements */
     }
 
     .nav-links.show {
-        display: flex; /* Show the menu when active */
+        display: flex;
+        /* Show the menu when active */
     }
 
     .hamburger {
         display: block;
         cursor: pointer;
-        z-index: 11; /* Ensure it's above the menu for easier interaction */
+        z-index: 11;
+        /* Ensure it's above the menu for easier interaction */
     }
 
     /* Mobile-specific styles for the hamburger and nav items */
     .nav-links li {
-        text-align: center; /* Center text in mobile view */
-        padding: 10px 0; /* Add some space between menu items */
+        text-align: center;
+        /* Center text in mobile view */
+        padding: 10px 0;
+        /* Add some space between menu items */
     }
 
     .nav-links a {
         padding: 1rem;
-        font-size: 18px; /* Adjust font size for readability */
+        font-size: 18px;
+        /* Adjust font size for readability */
         color: black;
         text-decoration: none;
     }
@@ -125,117 +136,136 @@ p {
         justify-content: center;
     }
 }
-
-/* Contact Us Section */
-.contact-us {
-    padding: 4rem 20rem; /* Increased left and right padding */
-    text-align: left;
-    color: #000000;
-    background-color: white;
+    /* Hero Section */
+    .hero-section {
+        width: 100%;
+        height: 40vh;
+        background-image: url('your-hero-image.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 15px;
+      }
+  
+      .hero-section h1 {
+        font-size: 3.25rem;
+        font-family: "Bower", Georgia, "Times New Roman", serif;
+        font-weight: 300;
+        line-height: 4rem;
+        color: #000000;
+        margin: 0;
+      }
+  
+      .hero-section p {
+        font-size: 1rem;
+        font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+        line-height: 1.25rem;
+        color: #000000;
+        margin-top: 1rem;
+      }
+      .content {
+        padding: 3rem 20%;
+        /* Significantly increased left and right padding */
+        text-align: center;
+        background-color: #F0F0F0;
+    }
+    .content p {
+        font-weight: 300;
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+      /* Offerings Section */
+      .offerings-section {
+        padding: 0 10%;
+      }
+  
+      .offerings-section h2 {
+        margin-top: 1.25rem;
+        margin-bottom: 1.5rem;
+        font-size: 2.25rem;
+        font-weight: 300;
+        font-family: "Bower", Georgia, "Times New Roman", serif;
+        line-height: 2.5rem;
+      }
+  
+      .offerings-section h3 {
+        margin-top: 1.25rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+      }
+  
+      .offerings-section p {
+        font-size: 1.1rem;
+        font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+        line-height: 1.25rem;
+        margin-bottom: 1rem;
+      }
+  
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .hero-section h1 {
+          font-size: 2rem;
+          line-height: 3rem;
+        }
+        .intro-section {
+          padding: 0 5%;
+          font-size: 1.25rem;
+          line-height: 2rem;
+        }
+        .offerings-section {
+          padding: 0 5%;
+        }
+        .offerings-section h2 {
+          font-size: 1.75rem;
+        }
+        .offerings-section h3 {
+          font-size: 1rem;
+        }
+      }
+ 
+/* Help Section */
+.help-section {
+    background: linear-gradient(135deg, #051C2C 60%, #03339c 100%);
+    text-align: center;
+    padding: 4rem 2rem;
+    color: white;
 }
 
-.contact-us h2 {
-    font-size: 3.225rem;
-    /* font-weight: 500; */
-    line-height: 4rem;
-    margin-bottom: 2rem;
+.help-section h2 {
+    font-size: 2.75rem;
+    font-family: "Bower", Georgia, "Times New Roman", serif;
+    font-weight: 300;
+    line-height: 3.25rem;
     text-align: center;
 }
 
-.contact-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.form-column, .info-column {
-    flex: 1;
-    padding: 1rem;
-    box-sizing: border-box;
-}
-
-.form-column p {
+.help-section p {
     font-size: 1.25rem;
+    font-family: "Bower", Georgia, "Times New Roman", serif;
+    font-weight: 300;
     line-height: 2rem;
-    margin-bottom: 1rem;
-    color: #333333;
+    text-align: center;
 }
 
-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-   
-}
-
-form input, form select, form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.cta-button {
-    background-color: #2251FF;
+.help-section a {
     color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    text-decoration: underline;
 }
 
-.cta-button:hover {
-    background-color: #0056b3;
+.help-section a:hover {
+    color: lightblue;
 }
-
-.info-column hr {
-    margin: 2rem 0;
-    border: none;
-    border-top: 1px solid #ccc;
-}
-
-/* Info Column Paragraph */
-.info-column p {
-    font-size: 1.25rem;
-    line-height: 2rem;
-    color: #333333;
-    margin: 0.5rem 0;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .contact-us {
-        padding: 2rem;
-    }
-
-    .contact-content {
-        flex-direction: column;
-    }
-
-    .form-column, .info-column {
-        width: 100%;
-        padding: 0;
-    }
-
-    .cta-button {
-        width: 100%;
-    }
-
-    /* Adjust info-column paragraph styling for mobile */
-    .info-column p {
-        font-size: 1.125rem;  /* Reduced font size */
-        line-height: 1.75rem;  /* Adjusted line height */
-    }
-}
-
-
 /* Footer Section */
 .footer {
-    background-color: #051c2c;
+    background-color: rgb(19, 4, 85);
     padding: 2rem 5%;
     /* Reduced left and right padding */
     opacity: 1;
@@ -257,7 +287,6 @@ form input, form select, form textarea {
 
 .footer-column h4 {
     margin-bottom: 15px;
-    color: white;
 }
 
 .footer-column a {
@@ -266,7 +295,7 @@ form input, form select, form textarea {
     /* Reduced the gap between links */
     color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 14px;
 }
 
 .footer-column p {
@@ -400,7 +429,7 @@ form input, form select, form textarea {
     }
 
     .footer-column a {
-        font-size: 1rem;
+        font-size: 13px;
         /* Slightly smaller font for smaller screens */
     }
 
@@ -428,7 +457,7 @@ form input, form select, form textarea {
     align-items: center;
     padding: 1rem 5%;
     /* Adjust padding as needed */
-    background-color: #051c2c;
+    background-color: rgb(19, 4, 85);
     /* Ensure consistent footer background */
 }
 

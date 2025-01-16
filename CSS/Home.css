@@ -142,35 +142,28 @@ p {
     text-align: center;
     padding: 4rem 2rem;
     background-color: #f9f9f9;
-    background-image: url('your-image-url.jpg');
-    /* Add your background image URL here */
     background-size: cover;
-    /* Ensure the image covers the entire section */
     background-position: center;
-    /* Center the background image */
     min-height: 60vh;
-    /* Set the minimum height of the hero section to 63% of the viewport height */
-}
-
-.hero p {
+    transition: background-image 1s ease-in-out;
+  }
+  
+  .hero p {
     line-height: 2rem;
     font-size: 1.6rem;
     font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
-}
-
-/* Button Styling */
-.cta-buttons {
+  }
+  
+  /* Button Styling */
+  .cta-buttons {
     margin-top: 2rem;
     display: flex;
     justify-content: center;
-    /* Center the buttons */
     gap: 1rem;
-    /* This adds space between the buttons */
     flex-wrap: wrap;
-    /* Allow buttons to wrap if needed on smaller screens */
-}
-
-.cta {
+  }
+  
+  .cta {
     background-color: blue;
     color: white;
     border: none;
@@ -179,32 +172,23 @@ p {
     font-size: 16px;
     cursor: pointer;
     transition: transform 0.3s;
-}
-
-.cta:hover {
+  }
+  
+  .cta:hover {
     transform: scale(1.1);
-}
-
-/* Mobile View Adjustments */
-@media screen and (max-width: 768px) {
+  }
+  
+  /* Mobile View Adjustments */
+  @media screen and (max-width: 768px) {
     .cta-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        /* Space between the buttons */
-        flex-direction: column;
-        /* Stack the buttons vertically on mobile */
+      flex-direction: column;
     }
-
     .cta {
-        width: 100%;
-        /* Make buttons take full width on mobile */
-        padding: 1rem;
-        /* Adjust padding for mobile */
-        margin: 0.5rem 0;
-        /* Add margin between buttons on mobile */
+      width: 100%;
+      padding: 1rem;
+      margin: 0.5rem 0;
     }
-}
+  }
 
 /* .insight applied to all relevant elements */
 /* General Styles */
@@ -298,6 +282,7 @@ p {
 .year-in-charts .right-column p,
 .year-in-charts .right-column .arrow-link {
     padding-left: 20px;
+  
     /* Adjust the padding value as needed */
 }
 
@@ -508,6 +493,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+   
 }
 
 .other-year-in-charts .left-column h1 {

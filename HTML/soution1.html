@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page</title>
+    <link rel="stylesheet" href="/CSS/solutions.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<style>
+.xr-section {
+  padding: 0 10%; /* 10% left and right padding */
+}
+
+.xr-title {
+  font-size: 3.25rem;
+  font-family: "Bower", Georgia, "Times New Roman", serif;
+  line-height: 4rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+.intro-text {
+  font-size: 1.55rem;
+  font-family: "Bower", Georgia, "Times New Roman", serif;
+  line-height: 2rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  font-family: "Bower", Georgia, "Times New Roman", serif;
+  line-height: 1.75rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+.description {
+  font-size: 1.55rem;
+  font-family: "Bower", Georgia, "Times New Roman", serif;
+  line-height: 2rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  font-size: 1.55rem;
+  font-family: "Bower", Georgia, "Times New Roman", serif;
+  line-height: 2rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+.blue-line {
+  border: none;
+  border-top: 3px solid blue;
+  margin: 20px 0; /* Gap above and below the line */
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .xr-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .intro-text, .description, .sub-title, li {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  .blue-line {
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .xr-title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .intro-text, .description, .sub-title, li {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+
+  .blue-line {
+    margin: 10px 0;
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+       <!-- Header Section -->
+       <header class="header">
+        <div class="logo">Your Logo</div>
+        <nav>
+            <div class="hamburger" id="hamburger">☰</div>
+            <ul class="nav-links" id="navLinks">
+              <li><a href="/HTML/Index.html">Home</a></li>
+              <li><a href="/HTML/Products.html">Products</a></li>
+              <li><a href="/HTML/solutions.html">Services</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="/HTML/Testimonial.html">Testimonials</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="/HTML/career.html">Careers</a></li>
+              <li><a href="/html/Contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <section class="xr-section">
+        <h2 class="xr-title">Extended Reality (XR) Solutions</h2>
+        <p class="intro-text">Extended Reality (XR) is revolutionizing industries by creating immersive environments that enhance learning, engagement, and operational efficiency. At Gritbyte Labs, we specialize in delivering AR, VR, and MR solutions tailored to meet the unique needs of businesses across diverse sectors.</p>
+        
+        <h3 class="sub-title">Our XR Offerings:</h3>
+        
+        <h4 class="sub-title">Immersive Training Modules:</h4>
+        <p class="description">Simulate real-world scenarios to prepare employees for high-stakes environments.</p>
+        
+        <h4 class="sub-title">Applications:</h4>
+        <ul>
+          <li><strong>Aviation: </strong>Emergency drills, in-flight procedures.</li>
+          <li>Healthcare: Surgical training, medical device handling.</li>
+          <li>Manufacturing: Equipment operation and safety protocols.</li>
+        </ul>
+        
+        <h4 class="sub-title">Virtual Product Showrooms:</h4>
+        <p class="description">Showcase products in an interactive 3D environment, enhancing customer engagement and decision-making.</p>
+        
+        <h4 class="sub-title">Industries:</h4>
+        <ul>
+          <li>Retail: Virtual try-ons and product exploration.</li>
+          <li>Automotive: Virtual car showrooms with customizable features.</li>
+        </ul>
+        
+        <h4 class="sub-title">Simulation Platforms:</h4>
+        <p class="description">Build environments for testing and research without real-world risks.</p>
+        
+        <h4 class="sub-title">Applications:</h4>
+        <ul>
+          <li>Defense: Tactical and combat simulations.</li>
+          <li>Education: Interactive classrooms and virtual labs.</li>
+        </ul>
+        
+        <h4 class="sub-title">Gamified Learning Experiences:</h4>
+        <p class="description">Use game mechanics to create engaging learning experiences for employees or customers.</p>
+        
+        <h4 class="sub-title">Benefits:</h4>
+        <ul>
+          <li>Increased knowledge retention and motivation.</li>
+        </ul>
+        
+        <h4 class="sub-title">Cross-Platform Compatibility:</h4>
+        <p class="description">Develop XR applications that work seamlessly on VR headsets, AR-enabled mobile devices, and immersive LED screens.</p>
+        
+        <h3 class="sub-title">Value to Clients:</h3>
+        <ul>
+          <li>Enhanced Training Outcomes: Risk-free environments improve employee readiness and reduce training costs.</li>
+          <li>Customer Engagement: Virtual showrooms and immersive experiences increase purchase intent and brand loyalty.</li>
+          <li>Operational Efficiency: Simulations save time and resources by reducing reliance on physical setups.</li>
+        </ul>
+        
+        <h3 class="sub-title">Industries Leveraging XR:</h3>
+        <ul>
+          <li>Aviation: Pilot training, emergency response.</li>
+          <li>Healthcare: Surgical simulations, patient education.</li>
+          <li>Retail: Virtual stores and product customization.</li>
+          <li>Education: Immersive learning platforms.</li>
+          <li>Manufacturing: Equipment handling and maintenance training.</li>
+        </ul>
+        
+        <h3 class="sub-title">Key Stats:</h3>
+        <ul>
+          <li>30% Faster Learning: Employees trained using XR retain knowledge more effectively.</li>
+          <li>40% Cost Reduction: Businesses save on physical training setups and logistics.</li>
+        </ul>
+      </section>
+      
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Your Logo</div>
+            <div class="footer-links">
+                <a href="#">Contact Us</a>
+                <a href="#">FAQ</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Preferences</a>
+                <a href="#">Terms of Use</a>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+        <div class="footer-bottom">
+            <hr>
+            <p>© 1996-2024 Your Company</p>
+        </div>
+    </footer>
+
+    <!-- hamburger -->
+    <script>
+                // Get the hamburger and nav links elements
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        // Toggle the 'active' class on the nav menu when hamburger is clicked
+        hamburger.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent the click event from bubbling up to the document
+            navLinks.classList.toggle('show');
+        });
+
+        // Close the hamburger menu if clicked outside of it
+        document.addEventListener('click', (event) => {
+            // Check if the click was outside the hamburger or the nav menu
+            if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+                navLinks.classList.remove('show');
+            }
+        });
+
+    </script>
+    
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+<script>
+    // Initialize the map
+    const map = L.map('map').setView([20.5937, 78.9629], 3); // Center map on India for a global view
+
+    // Add OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Locations with latitude, longitude, and label
+    const locations = [
+        { name: "Bangalore, India", lat: 12.9716, lon: 77.5946 },
+        { name: "Business Bay, Dubai", lat: 25.2048, lon: 55.2708 },
+        { name: "Toronto, Canada", lat: 43.7, lon: -79.42 },
+        { name: "London, UK", lat: 51.5074, lon: -0.1278 },
+        { name: "Seoul, South Korea", lat: 37.5665, lon: 126.978 },
+    ];
+
+    // Add markers for each location
+    locations.forEach(location => {
+        L.marker([location.lat, location.lon])
+            .addTo(map)
+            .bindPopup(`<b>${location.name}</b>`)
+            .openPopup();
+    });
+</script>
+  
+</body>
+</html>

@@ -327,75 +327,93 @@ p {
 /* Overall Section Style */
 .value-beyond {
     background-color: navy;
-    padding: 30px 10px; /* Reduced padding */
-    min-height: 15vh; /* Smaller height */
-    overflow: hidden; /* Prevent content overflow */
+    padding: 30px 10px;
+    /* Reduced padding */
+    min-height: 15vh;
+    /* Smaller height */
+    overflow: hidden;
+    /* Prevent content overflow */
     color: white;
 }
 
 /* Container for Section */
 .value-beyond-container {
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping for responsiveness */
-    gap: 15px; /* Reduced gap */
+    flex-wrap: wrap;
+    /* Allows wrapping for responsiveness */
+    gap: 15px;
+    /* Reduced gap */
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 10px; /* Reduced side padding */
+    padding: 0 10px;
+    /* Reduced side padding */
 }
 
 /* Text Column */
 .value-beyond-text-column {
     flex: 1;
-    padding: 10px; /* Reduced padding */
+    padding: 10px;
+    /* Reduced padding */
     text-align: left;
 }
 
 .value-beyond h2 {
-    font-size: 2rem; /* Smaller font size */
+    font-size: 2rem;
+    /* Smaller font size */
     font-weight: 300;
     line-height: 1.2;
     color: white;
 }
 
 .value-beyond p {
-    font-size: 1rem; /* Adjusted font size */
-    line-height: 1.4; /* Reduced line height */
+    font-size: 1rem;
+    /* Adjusted font size */
+    line-height: 1.4;
+    /* Reduced line height */
     color: white;
 }
 
 .value-beyond-cta-btn {
     display: inline-block;
-    margin-top: 10px; /* Smaller spacing */
-    font-size: 0.9rem; /* Reduced button font size */
+    margin-top: 10px;
+    /* Smaller spacing */
+    font-size: 0.9rem;
+    /* Reduced button font size */
     color: white;
     text-decoration: none;
     border: 2px solid white;
-    padding: 5px 15px; /* Smaller button padding */
+    padding: 5px 15px;
+    /* Smaller button padding */
     transition: transform 0.3s ease;
 }
 
 .value-beyond-cta-btn:hover {
-    transform: translateX(5px); /* Reduced hover movement */
+    transform: translateX(5px);
+    /* Reduced hover movement */
 }
 
 /* Image Column */
 .value-beyond-image-column {
     flex: 1;
-    padding: 10px; /* Reduced padding */
+    padding: 10px;
+    /* Reduced padding */
 }
 
 .value-beyond-image-column img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: auto;
+    /* Maintain aspect ratio */
     object-fit: cover;
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .value-beyond-container {
-        flex-direction: column; /* Stack text and image */
-        gap: 10px; /* Reduced gap */
+        flex-direction: column;
+        /* Stack text and image */
+        gap: 10px;
+        /* Reduced gap */
     }
 
     .value-beyond-text-column,
@@ -404,26 +422,30 @@ p {
     }
 
     .value-beyond h2 {
-        font-size: 1.8rem; /* Smaller heading font size */
+        font-size: 1.8rem;
+        /* Smaller heading font size */
         line-height: 1.3;
         text-align: center;
     }
 
     .value-beyond p {
-        font-size: 0.9rem; /* Smaller paragraph font size */
+        font-size: 0.9rem;
+        /* Smaller paragraph font size */
         line-height: 1.4;
         text-align: center;
     }
 
     .value-beyond-cta-btn {
-        font-size: 0.8rem; /* Smaller button font size */
+        font-size: 0.8rem;
+        /* Smaller button font size */
         text-align: center;
         display: block;
         margin: 10px auto 0;
     }
 
     .value-beyond-image-column img {
-        max-height: 30vh; /* Smaller image height */
+        max-height: 30vh;
+        /* Smaller image height */
     }
 }
 
@@ -431,16 +453,19 @@ p {
     padding: 20px 15px;
     text-align: center;
 }
+
 .images h2 {
     font-size: 2rem;
     margin-bottom: 20px;
 }
+
 .images .columns {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
 }
+
 .images .column {
     background: linear-gradient(145deg, #ffffff, #e6e6e6);
     box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
@@ -450,6 +475,7 @@ p {
     flex: 1;
     text-align: center;
 }
+
 .images .column img {
     width: 150px;
     height: 150px;
@@ -457,33 +483,40 @@ p {
     display: block;
     margin: 0 auto 15px;
 }
+
 .images .column p {
     margin: 10px 0;
 }
+
 .images .column p strong {
     font-weight: 500;
     font-size: 1.75rem;
     line-height: 2.5rem;
 }
+
 .images .column p:nth-of-type(2) {
     font-weight: 500;
     font-size: 0.85rem;
     line-height: 1.5rem;
     margin: 5px 0;
 }
+
 .images .column hr {
     width: 50%;
     margin: 15px auto;
     border: none;
     border-top: 1px solid #ddd;
 }
+
 .images .column p:nth-of-type(3) {
     font-size: 0.85rem;
     line-height: 1.5rem;
 }
+
 .images .button {
     margin-top: 30px;
 }
+
 .images .button a {
     display: inline-block;
     padding: 10px 20px;
@@ -495,23 +528,29 @@ p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
+
 .images .button a:hover {
     background-color: #0056b3;
 }
+
 @media (max-width: 768px) {
     .images .columns {
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
     }
 }
+
+
 /* Footer Section */
 .footer {
-    background-color: white;
-    padding: 2rem 20rem;
-    /* Added 20rem padding for left and right */
+    background-color: #051c2c;
+    padding: 2rem 5%;
+    /* Reduced left and right padding */
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.footer-content {
+.footer-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -519,89 +558,215 @@ p {
     gap: 2rem;
 }
 
-.footer-logo {
-    font-size: 24px;
-    flex: 1;
+.footer-column {
+    flex: 1 1 250px;
+    margin: 10px;
 }
 
-.footer-links {
-    display: flex;
-    gap: 1rem;
-    /* Reduced the gap between links */
-    flex: 2;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: black;
-    font-size: 14px;
-    font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
-}
-
-.footer-links a:hover {
-    color: blue;
-}
-
-.social-icons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.social-icons .icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-    transition: background-color 0.3s;
-}
-
-.social-icons .icon:hover {
-    background-color: blue;
+.footer-column h4 {
+    margin-bottom: 15px;
     color: white;
 }
 
-.footer-bottom {
-    margin-top: 2rem;
-    text-align: right;
-    font-size: 14px;
-    color: gray;
-    font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+.footer-column a {
+    display: block;
+    margin-bottom: 25px;
+    /* Reduced the gap between links */
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1rem;
 }
 
-.footer-bottom hr {
-    border: none;
-    border-top: 1px solid black;
-    margin-bottom: 1rem;
+.footer-column p {
+    display: block;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    color: blue;
+}
+
+/* Logo in Footer - Center it with top padding */
+.logo-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+    /* Added 10% top padding */
+}
+
+.footer-logo {
+    width: 150px;
+    /* Set a fixed width */
+    height: 50px;
+    /* Set a fixed height */
+    object-fit: contain;
+    /* Maintain aspect ratio */
+}
+
+/* Align email icon with the email on the same line */
+.footer-column p {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+    /* Added margin for space */
+}
+
+/* Added gap above email text */
+.footer-column p.email {
+    margin-top: 10px;
+}
+
+.footer-column p i {
+    margin-right: 8px;
+    /* Added margin to the right of the icon */
+}
+
+/* Space After Email */
+.footer-column p strong {
+    margin-right: 8px;
+    /* Space after 'Email:' label */
+}
+
+/* Location Flag Styling */
+.location-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+    /* Reduced space between each location */
+}
+
+.flag-icon {
+    width: 24px;
+    /* Increased width for the flag */
+    height: 18px;
+    /* Increased height for the flag */
+    margin-right: 8px;
+    /* Space between flag and location text */
+}
+
+/* Increased Gap Between Quick Links and Useful Links */
+.footer-column+.footer-column {
+    margin-top: 2rem;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .footer {
-        padding: 2rem;
-        /* Maintain the same style for mobile */
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-links {
-        flex-direction: column;
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
-        /* Same gap for mobile view */
+        padding: 0 20px;
+        /* Added left and right padding for mobile */
+    }
+
+    .footer-column {
+        text-align: left;
+        /* Center content in footer columns */
+        margin-bottom: 2rem;
+    }
+
+    .footer-logo {
+        max-width: 120px;
+        /* Adjusted logo size for smaller screens */
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        /* Stack text and icons vertically */
+        align-items: flex-start;
+        /* Align items to the start */
+        padding: 1rem;
+        /* Adjust padding for mobile */
+    }
+
+    .footer-bottom p {
+        margin-bottom: 10px;
+        /* Add space between text and icons */
     }
 
     .social-icons {
-        justify-content: center;
+        justify-content: flex-start;
+        /* Align social icons to the left */
+        gap: 10px;
+        /* Reduce gap between icons */
     }
+
+    .social-icons a {
+        font-size: 18px;
+        /* Slightly smaller icons for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 0 15px;
+        /* Reduced padding for very small screens */
+    }
+
+    .footer-column a {
+        font-size: 1rem;
+        /* Slightly smaller font for smaller screens */
+    }
+
+    .footer-column p {
+        font-size: 13px;
+        /* Adjusted font size for better readability */
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+        /* Reduced footer bottom text size */
+    }
+
+    .social-icons a {
+        font-size: 16px;
+        /* Even smaller icons for small screens */
+    }
+}
+
+/* Social Icons Style */
+/* Footer Bottom */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    /* Adjust padding as needed */
+    background-color: #051c2c;
+    /* Ensure consistent footer background */
+}
+
+.footer-bottom p {
+    color: white;
+    /* Set the text color to white */
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Space between icons */
+}
+
+.social-icons a {
+    color: rgb(255, 255, 255);
+    /* Set the icon color to black */
+    font-size: 20px;
+    /* Adjust icon size */
+    text-decoration: none;
+    /* Remove underline from links */
+}
+
+.social-icons a:hover {
+    color: rgb(19, 4, 85);
+    /* Add hover color */
+}
+
+.social-icons i {
+    transition: color 0.3s ease;
 }

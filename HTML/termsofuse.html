@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page</title>
+    <link rel="stylesheet" href="/CSS/Contact.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        .privacy-section {
+            padding-left: 10%;
+            padding-right: 10%;
+            margin-bottom: 2rem;
+        }
+
+        .privacy-section h1 {
+            font-size: 3.25rem;
+            line-height: 2rem;
+            font-weight: 300;
+        }
+
+        .privacy-section p {
+            font-size: 1.25rem;
+            line-height: 2rem;
+            font-weight: 300;
+            color: #333333;
+            margin: 0 0 1rem;
+            font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+        }
+
+        .privacy-section li {
+            font-size: 1.25rem;
+            line-height: 2rem;
+            color: #333333;
+            margin: 0 0 1rem;
+            font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+        }
+
+        .privacy-section .italic-text {
+            font-style: italic;
+        }
+
+        .privacy-section ul {
+            list-style-type: disc;
+            padding-left: 2rem;
+        }
+
+        .privacy-section .section-title {
+            font-size: 2.25rem;
+            font-weight: 300;
+            /* line-height: 1rem; */
+            color: black;
+            position: relative;
+            margin-bottom: 1rem;
+            display: inline-block;
+            padding-bottom: 1rem;
+            font-family: "Bower", Georgia, "Times New Roman", serif;
+        }
+
+        .privacy-section .section-title::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: blue;
+            margin-top: 0.75rem;
+        }
+
+        .privacy-section .sub-section {
+            margin-top: 1.5rem;
+            margin-left: 40px;
+            margin-bottom: 1.5rem;
+            font-size: 1.75rem;
+            font-weight: 500;
+            line-height: 2rem;
+            color: black;
+        }
+
+        .privacy-section .bullet-title {
+            font-weight: 500;
+            font-size: 1.25rem;
+            line-height: 2rem;
+            color: #333333;
+            font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            .privacy-section {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .privacy-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .privacy-section .section-title {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">Your Logo</div>
+        <nav>
+            <div class="hamburger" id="hamburger">☰</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/HTML/Index.html">Home</a></li>
+                <li><a href="/HTML/Products.html">Products</a></li>
+                <li><a href="/HTML/solutions.html">Services</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="/HTML/Testimonial.html">Testimonials</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="/HTML/career.html">Careers</a></li>
+                <li><a href="/HTML/contact2.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="privacy-section">
+        <h1>Terms of Use</h1>
+        <p class="italic-text">This privacy notice was last reviewed or revised on January 29, 2024.</p>
+        <p>Welcome to Gritbyte Labs ("Company," "we," "us," or "our"). By accessing or using our website at gritbyte.com (the "Website"), or engaging with our services, you agree to abide by these Terms of Use ("Terms"). These Terms govern your use of the Website and all associated services provided by Gritbyte Labs. </p>
+       
+        <p>If you do not agree with these Terms, please refrain from using our Website or services. </p>
+
+        <h2 class="section-title">1. Acceptance of Terms</h2>
+        <p>By accessing our Website or services, you confirm that:</p>
+        <ul>
+            <li>You are at least 18 years old or of legal age in your jurisdiction.</li>
+            <li>You have the authority to enter into this agreement on behalf of yourself or your organization.</li>
+            <li>You agree to comply with all applicable laws, regulations, and these Terms.</li>
+        </ul>
+
+        <h2 class="section-title">2. Services Provided</h2>
+        <p>Gritbyte Labs specializes in:</p>
+        <ul>
+            <li><strong>XR and AI Development:</strong> Cutting-edge immersive technologies and AI-driven solutions.
+            </li>
+            <li><strong>SaaS Applications:</strong> Scalable and robust software solutions tailored to client needs.
+            </li>
+            <li><strong>Offshore Team Management:</strong> Dedicated teams for extended operational support.</li>
+            <li><strong>QA Testing and Technical Support:</strong> Manual and automated testing for quality assurance.
+            </li>
+            <li><strong>3D Design & Rendering:</strong> High-quality models, animations, and visual assets.</li>
+            <li><strong>Consultation Services:</strong> Expert advice on technology and strategy alignment.</li>
+        </ul>
+        <p>These services are subject to specific agreements and may have additional terms.</p>
+
+        <h2 class="section-title">3. Use of Website</h2>
+
+        <h3 class="sub-section">3.1 Permitted Use</h3>
+        <p>You are permitted to use the Website for:</p>
+        <ul>
+            <li>Exploring our services and expertise.</li>
+            <li>Contacting us via provided forms or communication channels.</li>
+            <li>Submitting inquiries about potential collaborations or projects.</li>
+        </ul>
+
+        <h3 class="sub-section">3.2 Prohibited Activities</h3>
+        <p>You may not:</p>
+        <ul>
+            <li>Use the Website for unlawful activities.</li>
+            <li>Copy, modify, or distribute any Website content without written permission.</li>
+            <li>Attempt to disrupt or interfere with the Website’s functionality (e.g., hacking, viruses).</li>
+            <li>Harvest or misuse data from the Website for unauthorized purposes.</li>
+        </ul>
+
+        <h2 class="section-title">4. Intellectual Property</h2>
+
+        <h3 class="sub-section">4.1 Ownership</h3>
+        <p>All content on gritbyte.com, including but not limited to text, images, graphics, videos, software, and code,
+            is the intellectual property of Gritbyte Labs or its licensors. It is protected by copyright, trademark, and
+            other applicable laws.</p>
+
+        <h3 class="sub-section">4.2 Limited License</h3>
+        <p>You are granted a limited, non-exclusive, non-transferable license to access and use the Website for personal
+            or internal business purposes only.</p>
+
+        <h3 class="sub-section">4.3 Restrictions</h3>
+        <p>Without explicit written consent, you may not:</p>
+        <ul>
+            <li>Reproduce, distribute, or publicly display Website content.</li>
+            <li>Reverse-engineer, decompile, or tamper with the Website’s underlying code or software.</li>
+            <li>Use any logos, trademarks, or branding elements of Gritbyte Labs for commercial purposes.</li>
+        </ul>
+
+        <h2 class="section-title">5. User Accounts</h2>
+
+        <h3 class="sub-section">5.1 Account Creation</h3>
+        <p>Some features on the Website may require you to create an account. When creating an account, you agree to:
+        </p>
+        <ul>
+            <li>Provide accurate, complete, and up-to-date information.</li>
+            <li>Maintain the confidentiality of your account credentials.</li>
+            <li>Notify us immediately of any unauthorized access or use of your account.</li>
+        </ul>
+
+        <h3 class="sub-section">5.2 Account Termination</h3>
+        <p>We reserve the right to suspend or terminate your account if:</p>
+        <ul>
+            <li>You violate these Terms of Use.</li>
+            <li>We detect fraudulent, illegal, or harmful activity linked to your account.</li>
+        </ul>
+
+        <h2 class="section-title">6. Disclaimer of Warranties</h2>
+
+        <h3 class="sub-section">6.1 Website and Services</h3>
+        <p>The Website and all services provided by Gritbyte Labs are offered "as is" and "as available," without
+            warranties of any kind, either express or implied. This includes but is not limited to:</p>
+        <ul>
+            <li>Fitness for a particular purpose.</li>
+            <li>Non-infringement of intellectual property rights.</li>
+            <li>Availability, accuracy, or reliability of content and services.</li>
+        </ul>
+
+        <h3 class="sub-section">6.2 External Links</h3>
+        <p>The Website may include links to third-party websites. Gritbyte Labs is not responsible for the content,
+            policies, or practices of these external sites. Access them at your own discretion.</p>
+
+        <h2 class="section-title">7. Limitation of Liability</h2>
+
+        <h3 class="sub-section">7.1 General Liability</h3>
+        <p>To the fullest extent permitted by law, Gritbyte Labs and its affiliates are not liable for:</p>
+        <ul>
+            <li>Any indirect, incidental, or consequential damages arising from your use of the Website or services.
+            </li>
+            <li>Loss of revenue, data, or business opportunities caused by Website errors or service interruptions.</li>
+        </ul>
+
+        <h3 class="sub-section">7.2 Total Liability</h3>
+        <p>Our total liability for any claim related to the Website or services will not exceed the amount paid by you
+            to Gritbyte Labs (if applicable) during the 12 months preceding the claim.</p>
+
+        <h2 class="section-title">8. Privacy Policy Reference</h2>
+        <p>Your use of the Website is subject to our Privacy Policy, which details how we collect, use, and protect your
+            data. By using the Website, you acknowledge that you have read and understood the Privacy Policy.</p>
+
+        <h2 class="section-title">9. Third-Party Tools and Links</h2>
+
+        <h3 class="sub-section">9.1 Third-Party Tools</h3>
+        <p>The Website may integrate third-party tools or plugins (e.g., payment gateways, analytics platforms). These
+            tools are provided "as is" and are subject to the terms and policies of their respective providers. Gritbyte
+            Labs is not responsible for the functionality or security of these tools.</p>
+
+        <h3 class="sub-section">9.2 External Links</h3>
+        <p>The Website may contain links to external websites or services not operated by Gritbyte Labs.</p>
+        <p>These links are provided for informational purposes only.</p>
+        <p>We do not endorse or assume responsibility for the content, practices, or policies of third-party websites.
+            Accessing third-party websites is at your own risk.</p>
+
+        <h2 class="section-title">10. Governing Law</h2>
+        <p>These Terms are governed by and construed in accordance with the laws of India, without regard to its
+            conflict of law principles.</p>
+
+        <h3 class="sub-section">10.1 Dispute Resolution</h3>
+        <p>Any disputes arising under these Terms will be resolved in the courts of Bangalore, Karnataka, India.</p>
+        <p>By using the Website, you agree to submit to the jurisdiction of these courts.</p>
+
+        <h2 class="section-title">11. Changes to Terms</h2>
+
+        <h3 class="sub-section">11.1 Right to Update</h3>
+        <p>We reserve the right to update or revise these Terms of Use at any time. Changes will take effect immediately
+            upon posting on the Website, with the "Last Updated" date at the top reflecting the latest revision.</p>
+
+        <h3 class="sub-section">11.2 Notification of Changes</h3>
+        <p>For significant changes, we may provide additional notice via email or a notification on the Website. Your
+            continued use of the Website constitutes acceptance of the revised Terms.</p>
+
+        <h2 class="section-title">12. Contact Information</h2>
+        <p>If you have any questions, concerns, or feedback regarding these Terms of Use, please reach out to us:</p>
+        <ul>
+            <li><strong>Email:</strong> legal@gritbyte.com</li>
+            <li><strong>Phone:</strong> +91-XXXXXXXXXX</li>
+            <li><strong>Address:</strong> [Insert Office Address, e.g., Bangalore, India]</li>
+        </ul>
+
+        <h2 class="section-title">13. Entire Agreement</h2>
+        <p>These Terms, along with our Privacy Policy, constitute the entire agreement between you and Gritbyte Labs
+            regarding the use of the Website and supersede any prior agreements or understandings.</p>
+
+        <h2 class="section-title">14. Final Acknowledgment</h2>
+        <p>By accessing or using gritbyte.com, you acknowledge that you have read, understood, and agreed to these Terms
+            of Use.</p>
+
+
+    </section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column logo-column">
+            <img src="your-logo-path.png" alt="Gritbyte Labs Logo" class="footer-logo">
+        </div>
+        <div class="footer-column">
+            <h4>Quick Links</h4>
+            <hr>
+            <br>
+            <a href="/HTML/AboutUs.html">About</a>
+            <a href="/HTML/Index.html">Home</a>
+            <a href="/HTML/contact2.html">Contact</a>
+            <a href="/HTML/solutions.html">Service Solution</a>
+            <a href="/HTML/Products.html">Products</a>
+            
+        </div>
+        <div class="footer-column" style="margin-top: 2rem;"> <!-- Increased gap between sections -->
+            <h4>Useful Links</h4>
+            <hr>
+            <br>
+            <a href="/HTML/termsofuse.html">Terms of Use</a>
+            <a href="/HTML/faq.html">FAQ</a>
+            <a href="/HTML/privacypolicy.html">Privacy Policy</a>
+            <a href="#">Support</a>
+            
+        </div>
+        <div class="footer-column">
+            <h4>Contact Information</h4>
+            <hr>
+            <p class="email-contact"><i class="fas fa-envelope"></i> <strong>Email:</strong> contact@gritbyte.com</p>
+
+            <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +91-789879879</p>
+            <a href="#">Find an Office Near You →</a>
+        </div>
+        <div class="footer-column">
+            <h4>Address</h4>
+            <hr>
+            <div class="location-item">
+                <img src="/sweden.png" alt="India Flag" class="flag-icon">
+                <p style="font-size: 1rem;">Bangalore</p>
+            </div>
+            <div class="location-item">
+                <img src="/sweden.png" alt="UAE Flag" class="flag-icon">
+                <p style="font-size: 1rem;">Dubai</p>
+            </div>
+            <div class="location-item">
+                <img src="/sweden.png" alt="USA Flag" class="flag-icon">
+                <p style="font-size: 1rem;">New York</p>
+            </div>
+            <div class="location-item">
+                <img src="/sweden.png" alt="UK Flag" class="flag-icon">
+                <p style="font-size: 1rem;">London</p>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+    <!-- Footer Bottom -->
+<div class="footer-bottom">
+    <p>© 2025 Gritbyte Labs. All Rights Reserved.</p>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+</div>
+
+</footer>
+
+
+    <!-- hamburger -->
+    <script>
+        // Get the hamburger and nav links elements
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        // Toggle the 'active' class on the nav menu when hamburger is clicked
+        hamburger.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent the click event from bubbling up to the document
+            navLinks.classList.toggle('show');
+        });
+
+        // Close the hamburger menu if clicked outside of it
+        document.addEventListener('click', (event) => {
+            // Check if the click was outside the hamburger or the nav menu
+            if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+                navLinks.classList.remove('show');
+            }
+        });
+
+    </script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
+</body>
+
+</html>

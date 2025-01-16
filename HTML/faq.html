@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page</title>
+    <link rel="stylesheet" href="/CSS/Contact.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+       /* FAQ Section Styling */
+/* FAQ Section Styling */
+.faq-section {
+  width: 100%;
+  padding: 20px;
+  padding-left: 15%;
+  padding-right: 15%;
+  box-sizing: border-box;
+}
+
+/* FAQ Title */
+.faq-title {
+  font-size: 3.25rem;
+  font-family: "Bower", Georgia, "Times New Roman", serif;
+  font-weight: 300;
+  line-height: 4rem;
+  text-align: center;
+  margin: 0;
+}
+
+/* FAQ Question */
+.faq-question {
+  margin-bottom: 1.5rem;
+  font-size: 2.75rem;
+  font-family: "Bower", Georgia, "Times New Roman", serif;
+  font-weight: 300;
+  line-height: 3.25rem;
+}
+
+/* FAQ Answer */
+.faq-answer {
+  margin: 0 0 1.5rem;
+  font-size: 1.25rem;
+  font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+/* FAQ Divider (Horizontal Line) */
+.faq-divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .faq-question {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .faq-answer {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .faq-question {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+
+  .faq-answer {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">Your Logo</div>
+        <nav>
+            <div class="hamburger" id="hamburger">☰</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/HTML/Index.html">Home</a></li>
+                <li><a href="/HTML/Products.html">Products</a></li>
+                <li><a href="/HTML/solutions.html">Services</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="/HTML/Testimonial.html">Testimonials</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="/HTML/career.html">Careers</a></li>
+                <li><a href="/html/Contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="faq-section">
+        <h1 class="faq-title">Frequently Asked Questions</h1>
+        
+        <div class="faq-item">
+          <h2 class="faq-question">Where are your offices located ?</h2>
+          <p class="faq-answer">Our offices are in Bangalore and Mysore, with partners in UAE, USA, Canada, and South Korea.</p>
+          <hr class="faq-divider">
+        </div>
+      
+        <div class="faq-item">
+          <h2 class="faq-question">What is XR, and how can it benefit my business ?</h2>
+          <p class="faq-answer"> XR (Extended Reality) encompasses Virtual Reality (VR), Augmented Reality (AR), and Mixed Reality (MR). It can revolutionize training, product showcases, and customer experiences by creating immersive environments.</p>
+          <hr class="faq-divider">
+        </div>
+      
+        <div class="faq-item">
+          <h2 class="faq-question">Can you develop custom AI solutions ? </h2>
+          <p class="faq-answer">Absolutely! We design AI-powered tools tailored to your business needs, including chatbots, predictive analytics, and generative AI solutions for automation and decision-making. </p>
+          <hr class="faq-divider">
+        </div>
+      
+        <div class="faq-item">
+          <h2 class="faq-question">What types of SaaS platforms do you develop ?</h2>
+          <p class="faq-answer">We build scalable cloud-based platforms, including e-commerce solutions, Learning Management Systems (LMS), ERP systems, and CRM tools. </p>
+          <hr class="faq-divider">
+        </div>
+      
+        <div class="faq-item">
+          <h2 class="faq-question">Do you provide 3D design and rendering services ?</h2>
+          <p class="faq-answer">Yes, we specialize in creating high-quality 3D models, animations, and photorealistic renders for gaming, real estate, and product visualizations.</p>
+          <hr class="faq-divider">
+        </div>
+      
+        <div class="faq-item">
+          <h2 class="faq-question">How can I contact your technical support team ? </h2>
+          <p class="faq-answer">You can reach our technical support team via email at support@gritbyte.com or by filling out the support form on our Contact Us page.</p>
+          <hr class="faq-divider">
+        </div>
+      
+        <div class="faq-item">
+          <h2 class="faq-question">Do you offer support for XR devices ?</h2>
+          <p class="faq-answer">Yes, we provide specialized support for XR environments, including device compatibility and performance optimization. </p>
+        </div>
+      </section>
+      
+
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-column logo-column">
+          <img src="your-logo-path.png" alt="Gritbyte Labs Logo" class="footer-logo">
+      </div>
+      <div class="footer-column">
+          <h4>Quick Links</h4>
+          <hr>
+          <br>
+          <a href="/HTML/AboutUs.html">About</a>
+          <a href="/HTML/Index.html">Home</a>
+          <a href="/HTML/contact2.html">Contact</a>
+          <a href="/HTML/solutions.html">Service Solution</a>
+          <a href="/HTML/Products.html">Products</a>
+          
+      </div>
+      <div class="footer-column" style="margin-top: 2rem;"> <!-- Increased gap between sections -->
+          <h4>Useful Links</h4>
+          <hr>
+          <br>
+          <a href="/HTML/termsofuse.html">Terms of Use</a>
+          <a href="/HTML/faq.html">FAQ</a>
+          <a href="/HTML/privacypolicy.html">Privacy Policy</a>
+          <a href="#">Support</a>
+          
+      </div>
+      <div class="footer-column">
+          <h4>Contact Information</h4>
+          <hr>
+          <p class="email-contact"><i class="fas fa-envelope"></i> <strong>Email:</strong> contact@gritbyte.com</p>
+
+          <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +91-789879879</p>
+          <a href="#">Find an Office Near You →</a>
+      </div>
+      <div class="footer-column">
+          <h4>Address</h4>
+          <hr>
+          <div class="location-item">
+              <img src="/sweden.png" alt="India Flag" class="flag-icon">
+              <p style="font-size: 1rem;">Bangalore</p>
+          </div>
+          <div class="location-item">
+              <img src="/sweden.png" alt="UAE Flag" class="flag-icon">
+              <p style="font-size: 1rem;">Dubai</p>
+          </div>
+          <div class="location-item">
+              <img src="/sweden.png" alt="USA Flag" class="flag-icon">
+              <p style="font-size: 1rem;">New York</p>
+          </div>
+          <div class="location-item">
+              <img src="/sweden.png" alt="UK Flag" class="flag-icon">
+              <p style="font-size: 1rem;">London</p>
+          </div>
+      </div>
+
+  </div>
+  <hr>
+  <!-- Footer Bottom -->
+<div class="footer-bottom">
+  <p>© 2025 Gritbyte Labs. All Rights Reserved.</p>
+  <div class="social-icons">
+      <a href="https://facebook.com" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com" target="_blank">
+          <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://linkedin.com" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank">
+          <i class="fab fa-instagram"></i>
+      </a>
+  </div>
+</div>
+
+</footer>
+
+    <!-- hamburger -->
+    <script>
+        // Get the hamburger and nav links elements
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        // Toggle the 'active' class on the nav menu when hamburger is clicked
+        hamburger.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent the click event from bubbling up to the document
+            navLinks.classList.toggle('show');
+        });
+
+        // Close the hamburger menu if clicked outside of it
+        document.addEventListener('click', (event) => {
+            // Check if the click was outside the hamburger or the nav menu
+            if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+                navLinks.classList.remove('show');
+            }
+        });
+
+    </script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
+</body>
+
+</html>

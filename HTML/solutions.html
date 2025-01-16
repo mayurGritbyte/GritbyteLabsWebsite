@@ -4,10 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Page</title>
-    <link rel="stylesheet" href="../CSS/solutions.css">
+    <link rel="stylesheet" href="/CSS/solutions.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<style>
+.consultation-offerings {
+  padding: 0 5%;
+}
 
+.section-title {
+  font-size: 2rem;
+  font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+
+.consulting-title {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+.consulting-description {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+.sub-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .consulting-title {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+
+  .consulting-description,
+  .sub-title,
+  li {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  .columns {
+    flex-direction: column;
+  }
+
+  .column {
+    flex: 1 100%;
+  }
+
+  /* Remove horizontal lines on small screens */
+  .column:not(:last-child) {
+    border-bottom: none;
+  }
+}
+
+
+</style>
 </head>
 <body>
 
@@ -17,14 +104,14 @@
         <nav>
             <div class="hamburger" id="hamburger">☰</div>
             <ul class="nav-links" id="navLinks">
-              <li><a href="../HTML/Index.html">Home</a></li>
-              <li><a href="../HTML/Products.html">Products</a></li>
-              <li><a href="../HTML/solutions.html">Services</a></li>
+              <li><a href="/HTML/Index.html">Home</a></li>
+              <li><a href="/HTML/Products.html">Products</a></li>
+              <li><a href="/HTML/solutions.html">Services</a></li>
               <li><a href="#">Case Studies</a></li>
-              <li><a href="../HTML/Testimonial.html">Testimonials</a></li>
+              <li><a href="/HTML/Testimonial.html">Testimonials</a></li>
               <li><a href="#">Blog</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="../HTML/Contact.html">Contact Us</a></li>
+              <li><a href="/HTML/career.html">Careers</a></li>
+              <li><a href="/html/Contact.html">Contact Us</a></li>
           </ul>
         </nav>
     </header>
@@ -73,12 +160,12 @@
   <section class="value-beyond">
     <div class="value-beyond-container">
         <div class="value-beyond-text-column">
-            <h2>Creating value beyond <br>the hype</h2>
-            <p>Let’s deliver on the promise of technology from strategy to scale.</p>
+            <h2>Turning Technology Hype into Tangible Business Value</h2>
+            <p>"At Gritbyte Labs, we bridge the gap between ambition and action. Our consultation services focus on helping businesses leverage emerging technologies, from strategy to execution, delivering scalable and impactful results." </p>
             <a href="your-link.html" class="value-beyond-cta-btn">Get started →</a>
         </div>
         <div class="value-beyond-image-column">
-            <img src="../hero.jpg" alt="Value Beyond Image">
+            <img src="/hero.jpg" alt="Value Beyond Image">
         </div>
     </div>
 </section>
@@ -87,20 +174,92 @@
     <p>CAREERS</p>
     <div class="columns">
       <div class="column-left">
-        <img src="../career.jpg" alt="Hiring Image" class="hiring-image" />
+        <img src="/career.jpg" alt="Hiring Image" class="hiring-image" />
       </div>
       <div class="column-right">
-        <h2 class="hiring-title">We’re hiring</h2>
+        <h2 class="hiring-title">Shape the Future with Gritbyte Labs</h2>
         <p class="hiring-description">
-          McKinsey is looking for inspiring data scientists, software-cloud engineers, agile coaches, data engineers, product managers, designers, and digital marketers.
+          "Join our dynamic team of innovators working on cutting-edge technologies like XR, AI, SaaS, and more.
         </p>
         <p class="hiring-call-to-action">
-          Seeking to blend analytics, design, and engineering thinking with our powerful global network like McKinsey’s? Explore a tech career with us.
+          At Gritbyte Labs, we foster a collaborative culture that inspires creativity, drives growth, and delivers impact." 
         </p>
         <a href="next-page.html" class="learn-more">Learn more →</a>
       </div>
     </div>
   </section>
+  <section class="consultation-offerings">
+    <h2 class="section-title">Our Consultation Offerings</h2>
+  
+    <div class="columns">
+      <div class="column">
+        <h3 class="consulting-title">1. Technology Strategy Development</h3>
+        <p class="consulting-description">Identify the right technologies to meet your unique business goals.</p>
+        <h4 class="sub-title">Services Include:</h4>
+        <ul>
+          <li>Assessing current capabilities and gaps.</li>
+          <li>Recommending scalable and cost-effective solutions.</li>
+          <li>Roadmapping technology adoption for long-term success.</li>
+        </ul>
+      </div>
+      <hr>
+      
+      <div class="column">
+        <h3 class="consulting-title">2. Digital Transformation Planning</h3>
+        <p class="consulting-description">Design comprehensive plans to digitize operations and improve efficiency.</p>
+        <h4 class="sub-title">Focus Areas:</h4>
+        <ul>
+          <li>Legacy system upgrades.</li>
+          <li>Workflow automation using AI and SaaS.</li>
+          <li>Integrating XR for immersive employee training and customer engagement.</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="column">
+        <h3 class="consulting-title">3. Emerging Technology Consulting</h3>
+        <p class="consulting-description">Stay ahead of the curve with advice on leveraging cutting-edge innovations like XR, AI, and Generative AI.</p>
+        <h4 class="sub-title">Example Applications:</h4>
+        <ul>
+          <li>AI-Powered Analytics: Improve decision-making with actionable insights.</li>
+          <li>Immersive XR Experiences: Enhance training, marketing, or operations.</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="columns">
+      <div class="column">
+        <h3 class="consulting-title">4. Industry-Specific Solutions</h3>
+        <p class="consulting-description">Tailored recommendations for industries including:</p>
+        <ul>
+          <li>Retail: Personalization with AI and virtual showrooms with XR.</li>
+          <li>Healthcare: Patient management systems and AI diagnostics.</li>
+          <li>Real Estate: 3D property visualizations and customer engagement tools.</li>
+          <li>Manufacturing: Predictive maintenance and XR-based training.</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="column">
+        <h3 class="consulting-title">5. Proof of Concept (POC) Development</h3>
+        <p class="consulting-description">Test the feasibility of your ideas with pilot projects before full-scale implementation.</p>
+        <h4 class="sub-title">Benefits:</h4>
+        <ul>
+          <li>Minimize risks associated with new technology investments.</li>
+          <li>Evaluate ROI early in the process.</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="column">
+        <h3 class="consulting-title">6. Implementation Support</h3>
+        <p class="consulting-description">Provide hands-on assistance to ensure smooth technology adoption.</p>
+        <h4 class="sub-title">Services Include:</h4>
+        <ul>
+          <li>Resource planning and deployment.</li>
+          <li>Change management training for your workforce.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
   <section class="support">
     <h1>Need technical support for one of our solutions?</h1>
     <button onclick="location.href='nextpage.html';">

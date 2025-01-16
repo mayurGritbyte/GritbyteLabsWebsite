@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page</title>
+    <link rel="stylesheet" href="/CSS/Contact.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<style>
+     .privacy-section {
+            padding-left: 10%;
+            padding-right: 10%;
+            margin-bottom: 2rem;
+        }
+
+        .privacy-section h1 {
+            font-size: 3.25rem;
+            line-height: 2rem;
+            font-weight: 300;
+        }
+
+        .privacy-section p {
+            font-size: 1.25rem;
+            line-height: 2rem;
+            font-weight: 300;
+            color: #333333;
+            margin: 0 0 1rem;
+            font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+        }
+
+        .privacy-section li {
+            font-size: 1.25rem;
+            line-height: 2rem;
+            color: #333333;
+            margin: 0 0 1rem;
+            font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+        }
+
+        .privacy-section .italic-text {
+            font-style: italic;
+        }
+
+        .privacy-section ul {
+            list-style-type: disc;
+            padding-left: 2rem;
+        }
+
+        .privacy-section .section-title {
+            font-size: 2.25rem;
+            font-weight: 300;
+            /* line-height: 1rem; */
+            color: black;
+            position: relative;
+            margin-bottom: 1rem;
+            display: inline-block;
+            padding-bottom: 1rem;
+            font-family: "Bower", Georgia, "Times New Roman", serif;
+        }
+
+        .privacy-section .section-title::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: blue;
+            margin-top: 0.75rem;
+        }
+
+        .privacy-section .sub-section {
+            margin-top: 1.5rem;
+            margin-left: 40px;
+            margin-bottom: 1.5rem;
+            font-size: 1.75rem;
+            font-weight: 500;
+            line-height: 2rem;
+            color: black;
+        }
+
+        .privacy-section .bullet-title {
+            font-weight: 500;
+            font-size: 1.25rem;
+            line-height: 2rem;
+            color: #333333;
+            font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            .privacy-section {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .privacy-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .privacy-section .section-title {
+                font-size: 1.75rem;
+            }
+        }
+</style>
+</head>
+<body>
+
+       <!-- Header Section -->
+       <header class="header">
+        <div class="logo">Your Logo</div>
+        <nav>
+            <div class="hamburger" id="hamburger">☰</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/HTML/Index.html">Home</a></li>
+                <li><a href="/HTML/Products.html">Products</a></li>
+                <li><a href="/HTML/solutions.html">Services</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="/HTML/Testimonial.html">Testimonials</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="/HTML/career.html">Careers</a></li>
+                <li><a href="/html/Contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="privacy-section">
+        <h1>Privacy Notice</h1>
+        <p class="italic-text">This privacy notice was last reviewed or revised on January 29, 2024.</p>
+        <p>At [Your Company Name], and for all applications ("Apps") we develop, we are committed to protecting your
+            privacy and ensuring compliance with data protection regulations. This Privacy Policy outlines how we
+            collect, use, and safeguard information for:</p>
+        <ul>
+            <li><strong class="bullet-title">Our Company:</strong> Operations, services, and communication with clients
+                and users.</li>
+            <li><strong class="bullet-title">Applications Developed for Customers:</strong> Including apps published on
+                platforms like Google Play, App Store, Oculus Store, and Steam Store.</li>
+        </ul>
+        <p>By using our services or applications, you agree to the practices described in this Privacy Policy.</p>
+
+        <h2 class="section-title">1. Scope of the Privacy Policy</h2>
+        <p class="sub-section">This Privacy Policy applies to:</p>
+        <ul>
+            <li><strong class="bullet-title">Company Operations:</strong> Covers client interactions, business
+                communications, marketing, and support services.</li>
+            <li><strong class="bullet-title">Developed Applications:</strong> Includes custom-built apps for clients,
+                and any apps we publish or manage directly on their behalf.</li>
+        </ul>
+        <p>For apps developed for our customers, we follow their specific privacy requirements and guidelines. Users
+            should also review the privacy policies provided by our customers.</p>
+
+        <h2 class="section-title">2. Information We Collect</h2>
+        <p>We collect data necessary to provide and improve our services and apps effectively.</p>
+        <h3 class="sub-section">2.1 Company Operations</h3>
+        <ul>
+            <li><strong class="bullet-title">Contact Information:</strong> Name, email address, phone number, and
+                company details.</li>
+            <li><strong class="bullet-title">Project Information:</strong> Details of your requirements, feedback, and
+                related communications.</li>
+            <li><strong class="bullet-title">Payment Information:</strong> Billing details, securely processed via
+                trusted payment gateways.</li>
+            <li><strong class="bullet-title">Usage Data:</strong> Interaction with our website, emails, or other digital
+                platforms.</li>
+        </ul>
+
+        <h3 class="sub-section">2.2 Applications Developed</h3>
+        <ul>
+            <li><strong class="bullet-title">Account Information:</strong> Name, email, username, and profile details.
+            </li>
+            <li><strong class="bullet-title">Device Information:</strong> Device model, operating system, IP address,
+                and unique identifiers.</li>
+            <li><strong class="bullet-title">Usage Data:</strong> Interaction with app features, session details, and
+                preferences.</li>
+            <li><strong class="bullet-title">Location Data:</strong> If required by app functionality, approximate or
+                precise location.</li>
+            <li><strong class="bullet-title">Payment Information:</strong> Payment details for in-app purchases or
+                subscriptions, processed by platform-specific payment systems (e.g., Google Play, App Store).</li>
+        </ul>
+
+        <h2 class="section-title">3. How We Use Your Information</h2>
+        <p>We use collected data to:</p>
+        <h3 class="sub-section">3.1 For Company Operations</h3>
+        <ul>
+            <li><strong class="bullet-title">Deliver Services:</strong> Understand client needs and deliver customized
+                solutions.</li>
+            <li><strong class="bullet-title">Customer Support:</strong> Address inquiries and resolve issues.</li>
+            <li><strong class="bullet-title">Analytics:</strong> Improve our services through insights from usage
+                patterns.</li>
+            <li><strong class="bullet-title">Marketing and Communication:</strong> Share updates, newsletters, and
+                promotional content (with consent).</li>
+        </ul>
+        <h3 class="sub-section">3.2 For Developed Applications</h3>
+        <ul>
+            <li><strong class="bullet-title">App Functionality:</strong> Enable core features like user authentication,
+                in-app purchases, or gameplay.</li>
+            <li><strong class="bullet-title">Performance Optimization:</strong> Enhance app performance and usability.
+            </li>
+            <li><strong class="bullet-title">Personalization:</strong> Customize user experiences and content.</li>
+            <li><strong class="bullet-title">Compliance:</strong> Meet platform and legal requirements, including
+                parental consent for apps used by children.</li>
+        </ul>
+
+        <h2 class="section-title">4. Sharing Your Information</h2>
+        <p>We prioritize data privacy and transparency. Information may be shared in the following cases:</p>
+        <h3 class="sub-section">4.1 For Company Services</h3>
+        <ul>
+            <li><strong class="bullet-title">With Service Providers:</strong> Trusted vendors for cloud storage, payment
+                processing, or marketing.</li>
+            <li><strong class="bullet-title">Compliance:</strong> When required by law or in response to legal requests.
+            </li>
+        </ul>
+        <h3 class="sub-section">4.2 For Applications Developed</h3>
+        <ul>
+            <li><strong class="bullet-title">With Platform Providers:</strong> To enable platform-specific integrations
+                (e.g., Google Play Games, Steam Achievements).</li>
+            <li><strong class="bullet-title">Customer-Specific Requirements:</strong> Data collection and sharing based
+                on client-defined policies and practices.</li>
+            <li><strong class="bullet-title">Third-Party Tools:</strong> Integration with analytics, advertising, or
+                other APIs used within the app.</li>
+        </ul>
+
+        <h2 class="section-title">5. Data Security</h2>
+        <p>We implement stringent security measures to protect the information we handle, ensuring the safety of both
+            company operations and data from the apps we develop.</p>
+
+        <h3 class="sub-section">5.1 Security Practices</h3>
+        <ul>
+            <li><strong class="bullet-title">Encryption:</strong> Sensitive data is encrypted during storage and
+                transmission (e.g., SSL/TLS).</li>
+            <li><strong class="bullet-title">Access Control:</strong> Only authorized personnel have access to systems
+                and data.</li>
+            <li><strong class="bullet-title">Regular Audits:</strong> Periodic security reviews to identify and address
+                vulnerabilities.</li>
+            <li><strong class="bullet-title">Third-Party Compliance:</strong> Service providers we use comply with
+                recognized security standards.</li>
+        </ul>
+
+        <h3 class="sub-section">5.2 Specific to Apps</h3>
+        <ul>
+            <li><strong class="bullet-title">Secure Integration:</strong> All apps developed include secure APIs and
+                comply with platform security requirements (e.g., Google Play, App Store, Oculus Store, Steam).</li>
+            <li><strong class="bullet-title">Data Minimization:</strong> Apps are designed to collect only the data
+                necessary for their intended functionality.</li>
+        </ul>
+
+        <h3 class="sub-section">5.3 Limitations</h3>
+        <p>While we strive for maximum security, no system is entirely foolproof. In the event of a data breach, we will
+            notify affected parties promptly and take corrective actions.</p>
+
+
+        <h2 class="section-title">6. Cookies and Tracking</h2>
+
+        <h3 class="sub-section">6.1 Use of Cookies</h3>
+        <p>Cookies and similar technologies may be used for:</p>
+        <ul>
+            <li><strong class="bullet-title">Session Management:</strong> To remember user sessions and preferences.
+            </li>
+            <li><strong class="bullet-title">Analytics:</strong> To analyze website and app performance.</li>
+            <li><strong class="bullet-title">Personalization:</strong> To deliver customized content or ads (if
+                applicable).</li>
+        </ul>
+
+        <h3 class="sub-section">6.2 Tracking Technologies in Apps</h3>
+        <p>For apps, we may use:</p>
+        <ul>
+            <li><strong class="bullet-title">Device Identifiers:</strong> To optimize performance or track session
+                activities.</li>
+            <li><strong class="bullet-title">Analytics Tools:</strong> Integration with services like Firebase, Google
+                Analytics, or similar platforms to improve user experience.</li>
+        </ul>
+
+        <h3 class="sub-section">6.3 Managing Cookies and Tracking</h3>
+        <p>Users can:</p>
+        <ul>
+            <li>Adjust browser or device settings to block or manage cookies.</li>
+            <li>Opt out of tracking through in-app settings or platform preferences (e.g., App Tracking Transparency on
+                iOS).</li>
+        </ul>
+
+        <h2 class="section-title">7. Children’s Privacy</h2>
+
+        <h3 class="sub-section">7.1 General Policy</h3>
+        <p>Apps developed for or used by children comply with laws like COPPA (Children’s Online Privacy Protection Act)
+            and platform-specific policies (e.g., Google Play’s Families Policy).</p>
+
+        <h3 class="sub-section">7.2 Data Collection for Children</h3>
+        <p>For child-directed apps:</p>
+        <ul>
+            <li>Data collection is limited to what is necessary for the app’s functionality.</li>
+            <li>Personal information is not collected without verifiable parental consent.</li>
+        </ul>
+
+        <h3 class="sub-section">7.3 Compliance in Customer Apps</h3>
+        <p>When developing apps for clients targeting children, we ensure compliance with:</p>
+        <ul>
+            <li><strong class="bullet-title">Google Play Families Policy:</strong> For family-friendly content and
+                features.</li>
+            <li><strong class="bullet-title">App Store Guidelines:</strong> Specifically for child-directed apps and
+                data handling.</li>
+            <li><strong class="bullet-title">Oculus Store and Steam:</strong> Age-appropriate content and restricted
+                data collection.</li>
+        </ul>
+
+        <h3 class="sub-section">7.4 Reporting Concerns</h3>
+        <p>If you believe a child’s data has been collected without consent, contact us at privacy@[yourdomain].com, and
+            we will take immediate action.</p>
+
+
+        <h2 class="section-title">8. Data Retention</h2>
+        <p>We retain data only as long as necessary to fulfill its intended purpose or comply with legal obligations.
+        </p>
+
+        <h3 class="sub-section">8.1 For Company Operations</h3>
+        <ul>
+            <li><strong class="bullet-title">Client Data:</strong> Retained for the duration of the business
+                relationship and securely archived after project completion, unless otherwise requested.</li>
+            <li><strong class="bullet-title">Financial Records:</strong> Retained as required by tax and accounting
+                laws.</li>
+            <li><strong class="bullet-title">Communication Data:</strong> Emails and support requests may be stored for
+                quality assurance and troubleshooting purposes.</li>
+        </ul>
+
+        <h3 class="sub-section">8.2 For Developed Applications</h3>
+        <ul>
+            <li><strong class="bullet-title">User Data:</strong> Retention policies vary based on the app’s
+                functionality and platform guidelines. Data is retained only as long as needed for core features, such
+                as saving user progress or preferences.</li>
+            <li>Users may request deletion of their data via in-app settings or by contacting the app’s support team.
+            </li>
+            <li><strong class="bullet-title">Analytics Data:</strong> Aggregated and anonymized data may be retained for
+                research and optimization.</li>
+        </ul>
+
+        <h3 class="sub-section">8.3 Data Deletion</h3>
+        <p>For apps we develop for customers, data deletion policies align with client requirements and platform
+            compliance (e.g., GDPR, CCPA). Users can request data deletion through the app’s settings or by contacting
+            support.</p>
+
+        <h2 class="section-title">9. Store Publishing Compliance</h2>
+        <p>We ensure that all apps published on platforms such as Google Play, App Store, Oculus Store, and Steam Store
+            comply with their specific data privacy and security requirements.</p>
+
+        <h3 class="sub-section">9.1 Google Play</h3>
+        <ul>
+            <li>Compliance with Google’s User Data Policy, including transparency about data usage through the Data
+                Safety section.</li>
+            <li>Adherence to the Families Policy for apps targeting children, ensuring parental consent and
+                age-appropriate content.</li>
+        </ul>
+
+        <h3 class="sub-section">9.2 App Store</h3>
+        <ul>
+            <li>Full disclosure via Privacy Nutrition Labels, detailing data collected, its usage, and whether it’s
+                linked to individual users.</li>
+            <li>Compliance with Apple’s App Tracking Transparency (ATT) framework for user consent on tracking
+                activities.</li>
+        </ul>
+
+        <h3 class="sub-section">9.3 Oculus Store</h3>
+        <ul>
+            <li>Data collected from VR devices (e.g., tracking, spatial data) is handled per Oculus’s privacy
+                guidelines.</li>
+            <li>Apps ensure minimal data collection and provide clear communication of their purposes to users.</li>
+        </ul>
+
+        <h3 class="sub-section">9.4 Steam Store</h3>
+        <ul>
+            <li>Compliance with Valve’s privacy requirements for multiplayer games, in-game transactions, and community
+                interactions.</li>
+            <li>Clear disclosure of data use, including achievements, leaderboards, and other features.</li>
+        </ul>
+
+        <h3 class="sub-section">9.5 Platform-Specific Opt-Outs</h3>
+        <p>Users can adjust settings to disable tracking or limit data collection through platform features (e.g.,
+            Google Account preferences, iOS settings, or Steam privacy controls).</p>
+
+        <h2 class="section-title">10. User Rights</h2>
+        <p>We respect users' rights to control their personal data, whether collected through our company operations or
+            apps we develop.</p>
+
+        <h3 class="sub-section">10.1 Rights for Company Interactions</h3>
+        <ul>
+            <li><strong class="bullet-title">Access:</strong> Users may request a copy of the data we hold about them.
+            </li>
+            <li><strong class="bullet-title">Correction:</strong> Users can request corrections to inaccurate or
+                incomplete information.</li>
+            <li><strong class="bullet-title">Deletion:</strong> Users may request data deletion, subject to legal and
+                contractual obligations.</li>
+            <li><strong class="bullet-title">Data Portability:</strong> Provide user data in a structured, commonly used
+                format upon request.</li>
+        </ul>
+
+        <h3 class="sub-section">10.2 Rights for Developed Apps</h3>
+        <p>For apps, users can exercise their rights directly within the app or by contacting the customer or support
+            team. Rights align with regulations like GDPR (General Data Protection Regulation) and CCPA (California
+            Consumer Privacy Act).</p>
+
+        <h3 class="sub-section">10.3 How to Exercise Rights</h3>
+        <p>Users can contact us at privacy@[yourdomain].com to submit a request. Requests will be addressed within the
+            timelines mandated by applicable laws.</p>
+
+        <h2 class="section-title">11. Updates to the Privacy Policy</h2>
+        <p>We may update this Privacy Policy periodically to reflect changes in our practices, legal requirements, or
+            new features in our services and applications.</p>
+
+        <h3 class="sub-section">11.1 Notification of Changes</h3>
+        <ul>
+            <li>Updates will be posted on our website and, where applicable, within the apps we develop.</li>
+            <li>For significant changes, we will notify users via email or in-app notifications.</li>
+        </ul>
+
+        <h3 class="sub-section">11.2 Effective Date of Changes</h3>
+        <p>All updates will include an “Effective Date” at the top of this Privacy Policy. Continued use of our services
+            or apps after updates constitutes your acceptance of the revised terms.</p>
+
+        <h2 class="section-title">12. Contact Information</h2>
+        <p>If you have questions, concerns, or requests regarding this Privacy Policy or the handling of your data, you
+            can reach us at:</p>
+        <ul>
+            <li><strong>Email:</strong> privacy@[yourdomain].com</li>
+            <li><strong>Phone:</strong> +91-XXXXXXXXXX</li>
+            <li><strong>Address:</strong> [Your Office Address, e.g., Bangalore, India]</li>
+        </ul>
+        <p>For app-specific concerns, please use the support options provided within the app or the respective
+            platform's contact mechanisms.</p>
+
+        <h2 class="section-title">13. General Transparency Commitments</h2>
+
+        <h3 class="sub-section">13.1 Clear Communication</h3>
+        <p>We prioritize transparent communication about our data practices. Users can review privacy details via:</p>
+        <ul>
+            <li><strong>Google Play:</strong> “Data Safety” section.</li>
+            <li><strong>App Store:</strong> Privacy Nutrition Labels.</li>
+            <li><strong>Oculus Store:</strong> Data usage notifications.</li>
+            <li><strong>Steam Store:</strong> Clear disclosures in app descriptions.</li>
+        </ul>
+
+        <h3 class="sub-section">13.2 Platform-Specific Guidelines</h3>
+        <p>Each platform has unique privacy requirements, and we ensure that all our published apps comply with these
+            guidelines. For apps developed for customers, we work closely with them to meet their privacy obligations.
+        </p>
+
+        <h3 class="sub-section">13.3 User Trust</h3>
+        <p>Our commitment is to safeguard user privacy, ensure compliance with global regulations, and continuously
+            improve our practices for transparency and security.</p>
+
+    </section>
+  
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column logo-column">
+            <img src="your-logo-path.png" alt="Gritbyte Labs Logo" class="footer-logo">
+        </div>
+        <div class="footer-column">
+            <h4>Quick Links</h4>
+            <hr>
+            <br>
+            <a href="/HTML/AboutUs.html">About</a>
+            <a href="/HTML/Index.html">Home</a>
+            <a href="/HTML/contact2.html">Contact</a>
+            <a href="/HTML/solutions.html">Service Solution</a>
+            <a href="/HTML/Products.html">Products</a>
+            
+        </div>
+        <div class="footer-column" style="margin-top: 2rem;"> <!-- Increased gap between sections -->
+            <h4>Useful Links</h4>
+            <hr>
+            <br>
+            <a href="/HTML/termsofuse.html">Terms of Use</a>
+            <a href="/HTML/faq.html">FAQ</a>
+            <a href="/HTML/privacypolicy.html">Privacy Policy</a>
+            <a href="#">Support</a>
+            
+        </div>
+        <div class="footer-column">
+            <h4>Contact Information</h4>
+            <hr>
+            <p class="email-contact"><i class="fas fa-envelope"></i> <strong>Email:</strong> contact@gritbyte.com</p>
+
+            <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +91-789879879</p>
+            <a href="#">Find an Office Near You →</a>
+        </div>
+        <div class="footer-column">
+            <h4>Address</h4>
+            <hr>
+            <div class="location-item">
+                <img src="/sweden.png" alt="India Flag" class="flag-icon">
+                <p style="font-size: 1rem;">Bangalore</p>
+            </div>
+            <div class="location-item">
+                <img src="/sweden.png" alt="UAE Flag" class="flag-icon">
+                <p style="font-size: 1rem;">Dubai</p>
+            </div>
+            <div class="location-item">
+                <img src="/sweden.png" alt="USA Flag" class="flag-icon">
+                <p style="font-size: 1rem;">New York</p>
+            </div>
+            <div class="location-item">
+                <img src="/sweden.png" alt="UK Flag" class="flag-icon">
+                <p style="font-size: 1rem;">London</p>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+    <!-- Footer Bottom -->
+<div class="footer-bottom">
+    <p>© 2025 Gritbyte Labs. All Rights Reserved.</p>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+</div>
+
+</footer>
+
+
+    <!-- hamburger -->
+    <script>
+                // Get the hamburger and nav links elements
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        // Toggle the 'active' class on the nav menu when hamburger is clicked
+        hamburger.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent the click event from bubbling up to the document
+            navLinks.classList.toggle('show');
+        });
+
+        // Close the hamburger menu if clicked outside of it
+        document.addEventListener('click', (event) => {
+            // Check if the click was outside the hamburger or the nav menu
+            if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+                navLinks.classList.remove('show');
+            }
+        });
+
+    </script>
+    
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
+</body>
+</html>

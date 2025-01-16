@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Page</title>
-    <link rel="stylesheet" href="../CSS/AboutUs.css">
+    <link rel="stylesheet" href="/CSS/AboutUs.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 
@@ -17,14 +17,14 @@
         <nav>
             <div class="hamburger" id="hamburger">☰</div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="../HTML/Index.html">Home</a></li>
-                <li><a href="../HTML/Products.html">Products</a></li>
-                <li><a href="../HTML/solutions.html">Services</a></li>
+                <li><a href="/HTML/Index.html">Home</a></li>
+                <li><a href="/HTML/Products.html">Products</a></li>
+                <li><a href="/HTML/solutions.html">Services</a></li>
                 <li><a href="#">Case Studies</a></li>
-                <li><a href="../HTML/Testimonial.html">Testimonials</a></li>
+                <li><a href="/HTML/Testimonial.html">Testimonials</a></li>
                 <li><a href="#">Blog</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="../HTML/Contact.html">Contact Us</a></li>
+                <li><a href="/HTML/career.html">Careers</a></li>
+                <li><a href="/HTML/contact2.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -75,7 +75,7 @@
               </div>
           </div>
           <div class="vission-column">
-            <img src="../hero.jpg" alt="Vision and Mission Image" />
+            <img src="/hero.jpg" alt="Vision and Mission Image" />
           </div>
         </div>
       </section>
@@ -111,7 +111,7 @@
             <div class="row">
                 <div class="col team-member">
                     <div class="image-container">
-                        <img src="../xr.png" alt="Team Member 1" class="rounded-image">
+                        <img src="/xr.png" alt="Team Member 1" class="rounded-image">
                     </div>
                     <div class="team-info">
                         <h4>XR Developers</h4>
@@ -120,7 +120,7 @@
                 </div>
                 <div class="col team-member">
                     <div class="image-container">
-                        <img src="../ai.jpg"  alt="Team Member 2" class="rounded-image">
+                        <img src="/ai.jpg"  alt="Team Member 2" class="rounded-image">
                     </div>
                     <div class="team-info">
                         <h4>AI <br>Engineers</h4>
@@ -129,7 +129,7 @@
                 </div>
                 <div class="col team-member">
                     <div class="image-container">
-                        <img src="../3d.png"  alt="Team Member 3" class="rounded-image">
+                        <img src="/3d.png"  alt="Team Member 3" class="rounded-image">
                     </div>
                     <div class="team-info">
                         <h4>3D <br>Designers</h4>
@@ -138,7 +138,7 @@
                 </div>
                 <div class="col team-member">
                     <div class="image-container">
-                        <img src="../qa.png"  alt="Team Member 4" class="rounded-image">
+                        <img src="/qa.png"  alt="Team Member 4" class="rounded-image">
                     </div>
                     <div class="team-info">
                         <h4>QA <br>Engineers</h4>
@@ -147,7 +147,7 @@
                 </div>
                 <div class="col team-member">
                     <div class="image-container">
-                        <img src="../tech.png"  alt="Team Member 5" class="rounded-image">
+                        <img src="/tech.png"  alt="Team Member 5" class="rounded-image">
                     </div>
                     <div class="team-info">
                         <h4>Tech Support Engineers</h4>
@@ -163,30 +163,85 @@
     <p><a href="#">Get in touch with us</a> or find an office closest to you.</p>
   </section>
     
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">Your Logo</div>
-            <div class="footer-links">
-                <a href="#">Contact Us</a>
-                <a href="#">FAQ</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Cookie Preferences</a>
-                <a href="#">Terms of Use</a>
+    <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column logo-column">
+            <img src="your-logo-path.png" alt="Gritbyte Labs Logo" class="footer-logo">
+        </div>
+        <div class="footer-column">
+            <h4>Quick Links</h4>
+            <hr>
+            <br>
+            <a href="/HTML/AboutUs.html">About</a>
+            <a href="/HTML/Index.html">Home</a>
+            <a href="/HTML/contact2.html">Contact</a>
+            <a href="/HTML/solutions.html">Service Solution</a>
+            <a href="/HTML/Products.html">Products</a>
+            
+        </div>
+        <div class="footer-column" style="margin-top: 2rem;"> <!-- Increased gap between sections -->
+            <h4>Useful Links</h4>
+            <hr>
+            <br>
+            <a href="/HTML/termsofuse.html">Terms of Use</a>
+            <a href="/HTML/faq.html">FAQ</a>
+            <a href="/HTML/privacypolicy.html">Privacy Policy</a>
+            <a href="#">Support</a>
+            
+        </div>
+        <div class="footer-column">
+            <h4>Contact Information</h4>
+            <hr>
+            <p class="email-contact"><i class="fas fa-envelope"></i> <strong>Email:</strong> contact@gritbyte.com</p>
+
+            <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +91-789879879</p>
+            <a href="#">Find an Office Near You →</a>
+        </div>
+        <div class="footer-column">
+            <h4>Address</h4>
+            <hr>
+            <div class="location-item">
+                <img src="/sweden.png" alt="India Flag" class="flag-icon">
+                <p style="font-size: 1rem;">Bangalore</p>
+            </div>
+            <div class="location-item">
+                <img src="/sweden.png" alt="UAE Flag" class="flag-icon">
+                <p style="font-size: 1rem;">Dubai</p>
+            </div>
+            <div class="location-item">
+                <img src="/sweden.png" alt="USA Flag" class="flag-icon">
+                <p style="font-size: 1rem;">New York</p>
+            </div>
+            <div class="location-item">
+                <img src="/sweden.png" alt="UK Flag" class="flag-icon">
+                <p style="font-size: 1rem;">London</p>
             </div>
         </div>
-        <div class="social-icons">
-            <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
-        </div>
-        
-        <div class="footer-bottom">
-            <hr>
-            <p>© 1996-2024 Your Company</p>
-        </div>
-    </footer>
+
+    </div>
+    <hr>
+    <!-- Footer Bottom -->
+<div class="footer-bottom">
+    <p>© 2025 Gritbyte Labs. All Rights Reserved.</p>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+</div>
+
+</footer>
+
 
     <!-- hamburger -->
     <script>
